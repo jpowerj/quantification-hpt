@@ -1,0 +1,46 @@
+
+% Kozlowski example
+\begin{figure}[ht!]
+	\centering
+	\[\arraycolsep=1.8pt\def\arraystretch{1.2}
+	\begin{blockarray}{c@{\hspace{4mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c}
+		& ~~\rot{\textsf{\small{context 1}}} & \rot{\textsf{\small{context 2}}} & \rot{\textsf{\small{context 3}}} & \rot{\textsf{\small{context 4}}} & \rot{\textsf{\small{context 5}}} & \rot{\textsf{\small{context 6}}} & \rot{\textsf{\small{context 7}}} & \small{\cdots} & \rot{\small{\textsf{context}} $M$}~ \\
+		\begin{block}{c[@{\hspace{4mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c]}
+			\textsf{word 1} & 2 & 0 & 0 & 3 & 0 & 2 & 7 & \cdots & 4 \\
+			\textsf{word 2} & 3 & 1 & 0 & 6 & 0 & 0 & 2 & \cdots & 0 \\
+			\textsf{word 3} & 1 & 3 & 4 & 2 & 7 & 2 & 0 & \cdots & 9 \\
+			\textsf{word 4} & 7 & 0 & 1 & 0 & 3 & 0 & 7 & \cdots & 4 \\
+			\textsf{word 5} & 0 & 2 & 0 & 4 & 0 & 0 & 7 & \cdots & 0 \\
+			\textsf{word 6} & 0 & 9 & 3 & 2 & 1 & 3 & 0 & \cdots & 0 \\	
+			\textsf{word 7} & 2 & 0 & 0 & 1 & 0 & 5 & 1 & \cdots & 3 \\	
+			\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\	
+			\textsf{word~}N & 5 & 0 & 1 & 3 & 0 & 0 & 5 & \cdots & 3 \\
+		\end{block}
+		& \BAmulticolumn{9}{c}{\underbrace{\small\text{\phantom{C}Word-Context Matrix}\phantom{C}}_{N \times M}} \\
+	\end{blockarray}
+	\approx
+	\begin{blockarray}{c@{\hspace{3mm}}c@{\hspace{2mm}}c}
+		\rot{\phantom{\textsf{\small{context }$M$}}}x~ & ~y & z \\
+		\begin{block}{[c@{\hspace{2mm}}c@{\hspace{2mm}}c]}
+			.3 & .1 & .0 \\ .1 & .3 & .4 \\ .0 & .2 & .1 \\ .0 & .9 & .3 \\ .2 & .0 & .3 \\ .5 & .0 & .1 \\ .0 & .9 & .0 \\ \vdots & \vdots & \vdots \\ .2 & .1 & .3 \\
+			% \undermat{\text{Word Vectors}}{.2 & .1 & .3} \\
+		\end{block}
+		\BAmulticolumn{3}{c}{\underbrace{\small\text{Word Vectors}}_{N \times 3}} \\
+	\end{blockarray}
+	%\substack{{\textstyle\;\times\;}\\~\\~}
+	\times
+	\begin{blockarray}{c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c}
+		\BAmulticolumn{9}{c}{\phantom{\underbrace{\small\text{\phantom{Conte}Context Vectors}\phantom{Conte}}_{3 \times M}}} \\
+		\BAmulticolumn{9}{c}{\vspace{-2.5mm}} \\
+		%\BAnoalign{\centering Unlike ...}
+		\begin{block}{[c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c@{\hspace{2mm}}c]}
+			.2 & .2 & .1 & .3 & .0 & .2 & .7 & \cdots & .4 \\
+			.7 & .0 & .1 & .0 & .3 & .5 & .7 & \cdots & .4 \\
+			.9 & .8 & .6 & .3 & .0 & .1 & .7 & \cdots & .0 \\
+		\end{block}
+		\BAmulticolumn{9}{c}{\underbrace{\small\text{\phantom{Conte}Context Vectors}\phantom{Conte}}_{3 \times M}} \\
+	\end{blockarray}
+	\]
+	\caption{An example of the matrix decomposition procedure that word embedding algorithms implement, to solve the problem of \textit{retaining} information about word-context relationships while \textit{reducing} the $M$-dimensional representations of each word down to 3 dimensions. (Example adapted from \cite{kozlowski_geometry_2019}, Figure 1)}
+	\label{fig:kozlowski-decomposition}
+\end{figure}

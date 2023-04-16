@@ -1,0 +1,169 @@
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+	\centering
+	\begin{tikzpicture}
+		\node[draw, dashed] (Diplo) {\small{``diplomatic exchanges''}} ;
+		\node[draw, above=0.5cm of Diplo, rounded corners] (London) {London} ;
+		\node[draw, rounded corners,above=of London] (British) {British} ;
+		\node[draw, below=0.5cm of Diplo, minimum width=8.5mm, rounded corners] (Tehran) {Tehran} ;
+		\edge [<->] {British} {London} ;
+		\edge [<-] {London} {Diplo} ;
+		\edge [->] {Diplo} {Tehran} ;		
+	\end{tikzpicture}
+	\caption{``A \entity{British} official, speaking anonymously because of the delicacy of the diplomatic exchanges between \entity{London} and \entity{Tehran}...''}
+	\label{fig:nytimes-pgm1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}
+	\centering
+	\begin{tikzpicture} %
+		% Center
+		\node[draw, dashed] (Dealing) {``dealing with''} ;
+		\node[draw, below right=0.45cm and -0.7cm of Dealing, minimum width=8.5mm, rounded corners] (Tehran) {Tehran} ; %
+		\node[left=1.5cm of Tehran] (Bushp) {\phantom{Bush}} ;
+		\node[draw, rounded corners,above=1.5cm of Bushp] (Bush) {Bush} ;
+		\node[draw, rounded corners, above=1.5cm of Tehran] (British) {British} ;
+		\node[draw, rounded corners, below=of Tehran] (Iran) {Iran} ;
+		% Emission
+		\edge [<->] {Bush} {British} ;
+		\edge [<->] {Tehran} {Iran} ;
+		\edge [<-] {Bush} {Dealing} ;
+		\edge [->] {Dealing} {Tehran} ;
+	\end{tikzpicture}
+	\caption{``The \entity{Bush} administration said Thursday that the release of 15 \entity{British} sailors and marines held by \entity{Iran} for two weeks created no new openings in dealing with \entity{Tehran}...''}
+	\label{fig:nytimes-pgm2}
+	\end{subfigure}
+	\vspace{0.1cm}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\node[draw, dashed] (Treaty) {``treaty rights''} ;
+			\node[draw, rounded corners, below=0.5cm of Treaty] (Iran) {Iran} ;
+			\node[draw, rounded corners,above left=0.5cm and -1.2cm of Treaty] (British) {British} ;
+			\node[draw, rounded corners,left=0.5cm of British] (Bush) {Bush} ;
+			\node[draw, above right=0.5cm and -1.2cm of Treaty, minimum width=8.5mm, rounded corners] (French) {French} ; %
+			\node[draw, rounded corners, right=0.4cm of French] (German) {German} ;
+			\edge [<-] {Bush} {Treaty} ;
+			\edge [<-] {British} {Treaty} ;
+			\edge [<-] {French} {Treaty} ;
+			\edge [<-] {German} {Treaty} ;
+			\edge [->] {Treaty} {Iran} ;
+		\end{tikzpicture}
+		\caption{``By deceiving the nuclear agency about its activities, President \entity{Bush} and \entity{British}, French and German officials say, \entity{Iran} has given up whatever treaty rights it once enjoyed.''}
+		\label{fig:nytimes-pgm3}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\begin{tikzpicture} %
+				% Center
+				\node[draw, rounded corners] (Washington) {Washington} ;
+				\node[draw, rounded corners,below left=0.5cm and 0cm of Washington,minimum width=20mm] (Bush) {Bush} ;
+				\node[draw, rounded corners,below right=0.5cm and 0cm of Washington] (US) {United States} ;
+				
+				% Emission
+				\edge [<->] {Washington} {Bush} ;
+				\edge [<->] {Washington} {US} ;
+				\edge [<->] {Bush} {US} ;
+			\end{tikzpicture}
+			\caption{``Asserting \entity{Washington}'s determination to protect Japan and South Korea, its principal allies in the region, Mr. \entity{Bush} said the \entity{United States} `will meet the full range of our deterrent and security commitments.'{}''}
+			\label{fig:nytimes-pgm4}
+	\end{subfigure}
+	\caption{Graphical models of the relationships which context-sensitive text-analysis algorithms can infer from sentences (1) through (4) above.}
+	\label{fig:nytimes-pgm14}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+	\centering
+	\begin{tikzpicture} %
+		% Center
+		\node[draw, rounded corners] (Bush) {Bush} ;
+		\node[draw, rounded corners,right=of Bush] (London) {London} ;
+		\node[draw, rounded corners,above=of London] (British) {British} ;
+		\node[draw, below=of London, minimum width=8.5mm, rounded corners] (Tehran) {Tehran} ; %
+		\node[draw, rounded corners, below=of Tehran] (Iran) {Iran} ;
+		\edge [<->] {Bush} {British} ;
+		% Diplo label
+		%\node [above=0.33cm of Tehran] (Diplol) {} ;
+		\node (Diplol) at ($(Tehran)!0.5!(London)$) {} ;
+		\node [draw, dashed, right=0.8cm of Diplol] (Diplo) {\footnotesize\shortstack{``diplomatic\\exchanges''}} ;
+		
+		\edge [<->] {Tehran} {Iran} ;
+		\edge [<->] {Bush} {Tehran} ;
+		% Bush-Tehran label
+		\node (Dealingl) at ($(Bush)!0.5!(Tehran)$) {} ;
+		\node [draw, dashed, below=0.75cm of Bush] (Dealing) {\footnotesize\shortstack{``dealing\\with''}} ;
+		\edge [<->] {London} {Tehran} ;
+		\edge [<->] {British} {London} ;
+		\edge [-,dashed] {Diplol} {Diplo} ;
+		\edge [-,dashed] {Dealingl} {Dealing} ;
+	\end{tikzpicture}
+	\caption{The systematic merging of the networks in Figures \ref{fig:nytimes-pgm1} and \ref{fig:nytimes-pgm2}.}
+	\label{fig:nytimes-pgm5}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}
+	\centering
+	\begin{tikzpicture} %
+		% Center
+		\node[draw, rounded corners] (Bush) {Bush} ;
+		\node[draw, rounded corners,right=of Bush] (London) {London} ;
+		\node[draw, rounded corners,above=of London] (British) {British} ;
+		\node[draw, below=of London, minimum width=8.5mm, rounded corners] (Tehran) {Tehran} ; %
+		\node[draw, rounded corners, below=of Tehran] (Iran) {Iran} ;
+		\edge [<->] {Bush} {British} ;
+		\edge [<->] {Tehran} {Iran} ;
+		\edge [<->] {Bush} {Tehran} ;
+		\edge [<->] {London} {Tehran} ;
+		\edge [<->] {British} {London} ;
+		\edge [<->] {Bush} {Iran} ;
+		% Bush-Iran label
+		\node (Treatyl) at ($(Bush)!0.5!(Iran)$) {} ;
+		\node [draw, dashed, below=1cm of Bush] (Treaty) {\footnotesize\shortstack{``treaty\\rights''}} ;
+		%\edge [<->, bend left=90,looseness=1.2] {British} {Iran} ;
+		\edge [-,dashed] {Treatyl} {Treaty} ;
+		\path[<->]          (British)  edge   [bend left=60]   node[midway,right,draw,dashed,xshift=0.05cm] {\footnotesize\shortstack{``treaty\\rights''}} (Iran);
+		% British-Iran label
+		%\node (BTreatyl) at ($(London)!0.5!(Tehran)$) {} ;
+		%\node [draw, dashed, right=1cm of BTreatyl] (BTreaty) {\footnotesize\shortstack{``treaty\\rights''}} ;
+		%\edge [<->, bend left=90,looseness=1.2] {British} {Iran} ;
+		%\edge [-,dashed] {BTreatyl} {BTreaty} ;
+	\end{tikzpicture}
+	\caption{The network formed by incorporating the information in Figure \ref{fig:nytimes-pgm3} into the network of panel (a).}
+	\label{fig:nytimes-pgm6}
+\end{subfigure}
+\caption{An illustration of how, after constructing the individual-sentence context networks in Figure \ref{fig:nytimes-pgm14}, the algorithm can systematically merge the information across sentences, eventually producing the final corpus-wide network shown in Figure \ref{fig:nytimes-pgmfinal}.}
+\label{fig:nytimes-pgm57}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\tikz{ %
+		% Center
+		\node[draw, rounded corners] (Bush) {Bush} ;
+		\node[below=of Bush] (Bushp) {\phantom{Bush}} ;
+		\node[draw, rounded corners,left=of Bushp] (Wash) {Washington} ;
+		\node[draw, rounded corners,below=of Wash] (US) {United States} ;
+		\node[draw, rounded corners,right=of Bush] (London) {London} ;
+		\node[draw, rounded corners,above=of London] (British) {British} ;
+		\node[draw, below=of London, minimum width=8.5mm, rounded corners] (Tehran) {Tehran} ; %
+		\node[draw, rounded corners, below=of Tehran] (Iran) {Iran} ;
+		
+		% Emission
+		\edge [<->] {Bush} {British} ;
+		\edge [<->] {Tehran} {Iran} ;
+		\edge [<->] {Bush} {Tehran} ;
+		\edge [<->] {London} {Tehran} ;
+		\edge [<->] {British} {London} ;
+		\edge [<->] {Bush} {Iran} ;
+		%\edge [<->] {British} {Iran} ;
+		\edge [<->] {Bush} {Wash} ;
+		\edge [<->] {Bush} {US} ;
+		\edge [<->] {Wash} {US} ;
+	}
+	\caption{The final corpus-wide contextual network, combining all information from the individual networks in Figure \ref{fig:nytimes-pgm14} (edge labels omitted for clarity).}
+	\label{fig:nytimes-pgmfinal}
+\end{figure}

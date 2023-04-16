@@ -1,0 +1,70 @@
+\begin{tikzpicture}[scale=1.1]
+	\begin{axis}[
+		%title={Temperature dependence of CuSO\(_4\cdot\)5H\(_2\)O solubility},
+		xlabel={Political Economic},
+		ylabel={Hegelian},
+		xmin=0, xmax=1.0,
+		ymin=0, ymax=1.0,
+		xtick={0,0.2,0.4,0.6,0.8,1.0},
+		ytick={0,0.2,0.4,0.6,0.8,1.0},
+		legend pos=north west,
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style=dashed,
+		]
+		
+		\addplot[
+		color=blue,
+		%mark=circle,
+		->,
+		smooth
+		%patch,
+		%mesh,% without mesh, pgfplots tries to fill
+		%patch type=quadratic spline
+		]
+		coordinates {
+			(0.2,0.8)(0.65,0.65)(0.8,0.2)
+		};
+		%\legend{CuSO\(_4\cdot\)5H\(_2\)O}
+		\addplot[
+		color=orange,
+		%mark=circle,
+		<-,
+		smooth
+		]
+		coordinates {
+			(0.2,0.8)(0.35,0.35)(0.8,0.2)
+		};
+		
+		\addplot[
+		scatter/classes={a={blue}, b={orange}},
+		%scatter/classes={%
+			%	a={mark=square*,blue},%
+			%	b={mark=triangle*,red},%
+			%	c={mark=o,draw=black}},
+		scatter, mark=*, only marks, 
+		scatter src=explicit symbolic,
+		nodes near coords*={\Label},
+		nodes near coords style={
+			%anchor=west,
+			anchor=\perpointanchor,
+			xshift=1mm,
+			yshift=\perpointyshift,
+			color=\perpointcolor
+		},
+		visualization depends on={value \thisrow{label} \as \Label},
+		visualization depends on={value \thisrow{anchorclass} \as \perpointanchor},
+		visualization depends on={value \thisrow{yshift} \as \perpointyshift},
+		visualization depends on={value \thisrow{class} \as \perpointcolor}
+		] table [meta=class] {
+			x y anchorclass yshift class label
+			0.2 0.8 east 0.25cm blue $\mathbf{pre}_w^{a_1}$
+			0.8 0.2 west 0.25cm blue $\mathbf{post}_w^{a_1}$
+			0.2 0.8 east -0.25cm orange $\mathbf{post}_w^{a_2}$
+			0.8 0.2 west -0.25cm orange $\mathbf{pre}_w^{a_2}$
+			%0.7 0.6 a C
+			%0.35 0.4 a D
+		};
+		
+	\end{axis}
+\end{tikzpicture}

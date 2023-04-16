@@ -1,0 +1,10 @@
+WPA_Online_Appendix/
+data/
+code/.idea/
+code/__pycache__/
+*.model
+*.vectors
+*.pkl
+code/*.model
+code/*.vectors
+code/*.pkl
