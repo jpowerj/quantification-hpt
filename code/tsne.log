@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.12.8)  15 APR 2023 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.12.8)  16 APR 2023 17:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1125,29 +1125,32 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
 
 (C:\Users\jpjac\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [1
+)
+Overfull \hbox (9.361pt too wide) in paragraph at lines 58--59
+[][] 
+ []
+
+[1
 
 {C:/Users/jpjac/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (tsne.aux) )
  
 Here is how much of TeX's memory you used:
- 34954 strings out of 478614
- 916624 string characters out of 2843122
+ 34949 strings out of 478614
+ 916482 string characters out of 2843122
  1381010 words of memory out of 3000000
- 52432 multiletter control sequences out of 15000+600000
+ 52427 multiletter control sequences out of 15000+600000
  492201 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,9n,104p,1175b,2339s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/
 Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/
-Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/User
-s/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/User
+Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/User
 s/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/User
 s/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users
-/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users
 /jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on tsne.pdf (1 page, 60249 bytes).
+Output written on tsne.pdf (1 page, 55027 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
+ 30 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

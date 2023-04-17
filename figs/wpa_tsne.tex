@@ -1,0 +1,36 @@
+
+\begin{tikzpicture}
+		\begin{axis}[axis lines=center,
+			xmin=41.751587-1.0888500213623047, xmax=52.640087+1.0888500213623047,
+			ymin=-6.425065-0.9609169006347656, ymax=3.1841044+0.9609169006347656,
+			xtick={41.751587,52.640087},ytick={-6.425065,3.1841044},
+			xlabel=$x$,ylabel=$y$,
+			x label style={anchor=west},
+			y label style={anchor=south},
+			width=\textwidth
+			]
+			\addplot+[only marks,point meta=explicit symbolic, nodes near coords] coordinates
+{
+(48.855751037597656, -6.425065040588379)[]
+(52.64008712768555, -4.181150436401367)[]
+(48.783687591552734, -5.445539474487305)[]
+(43.57425308227539, 3.1841044425964355)[]
+(41.7515869140625, 0.7898992896080017)[]
+(44.125770568847656, 2.845097303390503)[]};\node (man) at (axis cs:48.85575, -6.425065){};
+\node (woman) at (axis cs:52.640087, -4.1811504){};
+\node (master) at (axis cs:48.783688, -5.4455395){};
+\node (black) at (axis cs:43.574253, 3.1841044){};
+\node (slave) at (axis cs:41.751587, 0.7898993){};
+\node (white) at (axis cs:44.12577, 2.8450973){};
+\node[anchor = north] (manl) at(axis cs: 48.85575, -6.425065){$\entpgf{man}$};
+\node[anchor = north] (womanl) at(axis cs: 52.640087, -4.1811504){$\entpgf{woman}$};
+\node[anchor = north] (masterl) at(axis cs: 48.783688, -5.4455395){$\entpgf{master}$};
+\node[anchor = south] (blackl) at(axis cs: 43.574253, 3.1841044){$\entpgf{black}$};
+\node[anchor = south] (slavel) at(axis cs: 41.751587, 0.7898993){$\entpgf{slave}$};
+\node[anchor = north] (whitel) at(axis cs: 44.12577, 2.8450973){$\entpgf{white}$};
+\draw[->,dashed,>=stealth](man) to (woman);
+\draw[->,>=stealth](master) to (slave);
+\draw[->,>=stealth](white) to (black);
+
+\end{axis}
+\end{tikzpicture}
