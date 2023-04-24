@@ -4,13 +4,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class PointData:
-    def __init__(self, x, y, label, anchor, xshift=0.0, yshift=0.0):
+    def __init__(self, x, y, label, anchor, xshift=0.0, yshift=0.0,
+                 formatted=None, draw_point=True, draw_label=True):
         self.x = x
         self.y = y
         self.label = label
         self.anchor = anchor
         self.xshift = xshift
         self.yshift = yshift
+        self.formatted = formatted
+        self.draw_point = draw_point
+        self.draw_label = draw_label
 
     def escaped_label(self):
         return self.label.replace("_", "\\_")
@@ -21,28 +25,46 @@ class PointData:
     def pgf_str(self):
         #quoted_label = "\"" + escaped_label + "\""
         #styled_label = "\\entpgf{" + escaped_label + "}"
-        return f"({self.x}, {self.y})[]"
+        if self.draw_point:
+            return f"({self.x}, {self.y})[]"
+        return ""
 
-    def point_str(self):
-        #print("[point_str()] self.label = " + str(self.label))
-        return "\\node (" + self.escaped_label() + ") at (axis cs:" + str(self.x) + ", " + str(self.y) + "){};"
+    def point_str(self, debug=False):
+        if debug:
+            print("[point_str()] self.label = " + str(self.label))
+        point_options = ""
+        if not self.draw_point:
+            # "Invisible" point
+            point_options = "[inner sep=0] "
+        return "\\node " + point_options + "(" + self.escaped_label() + ") at (axis cs:" + str(self.x) + ", " + str(self.y) + "){};"
 
     def label_str(self):
         label_pos = "\\node[anchor = " + self.anchor + ", xshift=" + str(self.xshift) + ", yshift=" + str(self.yshift) + "] (" + self.escaped_label() + "l) at(axis cs: " + str(self.x) + ", " + str(self.y) + ")"
-        label_text = "{$\\entpgf{" + self.escaped_label() + "}$};"
-        return label_pos + label_text
+        default_formatted = "$\\entpgf{" + self.escaped_label() + "}$"
+        if self.formatted is None:
+            label_formatted = default_formatted
+        else:
+            label_formatted = self.formatted
+        label_text = "{" + label_formatted + "};"
+        if self.draw_label:
+            return label_pos + label_text
+        return ""
 
 class Arrow:
-    def __init__(self, start, end, dash_str):
+    def __init__(self, start, end, dash_str, type_str="->"):
         self.start = start.replace("_", "\\_")
         self.end = end.replace("_", "\\_")
         self.dash_str = dash_str
         if self.dash_str != "" and (not self.dash_str.endswith(",")):
             self.dash_str = self.dash_str + ","
         print("[Arrow()] self.dash_str = " + str(self.dash_str))
+        self.type_str = type_str
 
     def __str__(self):
-        return "\\draw[->," + self.dash_str + ">=stealth,thick,-latex](" + self.start + ") to (" + self.end + ");"
+        latex_option = ",-latex"
+        if self.type_str != "->":
+            latex_option = ""
+        return "\\draw[" + self.type_str + "," + self.dash_str + ">=stealth,thick," + latex_option + "](" + self.start + ") to (" + self.end + ");"
 
 tikz_start = """
 \\begin{tikzpicture}
@@ -53,7 +75,7 @@ tikz_start = """
 			xmin=!pyxmin!-!pyxcap!, xmax=!pyxmax!+!pyxcap!,
 			ymin=!pyymin!-!pyycap!, ymax=!pyymax!+!pyycap!,
 			xtick={!pyxmin!,!pyxmax!},ytick={!pyymin!,!pyymax!},
-			%xlabel=$x$,ylabel=$y$,
+			xlabel=!pyxlabel!,ylabel=!pyylabel!,
 			%x label style={anchor=west},
 			%y label style={anchor=south},
 			width=\\textwidth
@@ -110,23 +132,47 @@ def get_yshift(token, label_data):
         return label_data[token]['yshift']
     return 0.0
 
-def custom_latex_export(df, label_data=None, arrows=None, floor_ceil=False,
-                        self_contained=False, pad_pct=0.05):
+def get_prop(token, label_data, prop_name, default_val=None):
+    if token in label_data and prop_name in label_data[token]:
+        return label_data[token][prop_name]
+    return default_val
+
+def custom_latex_export(df, label_data=None, arrow_data=None, floor_ceil=False,
+                        self_contained=False, pad_pct=0.05, axis_options=None,
+                        debug=False):
     if label_data is None:
         label_data = {}
+    if axis_options is None:
+        xlabel = '$x$'
+        ylabel = '$y$'
+    else:
+        xlabel = axis_options['xlabel']
+        ylabel = axis_options['ylabel']
     pgf_list = []
     point_list = []
     label_list = []
     for row_index, row in df.iterrows():
         cur_token = row_index
+        should_include = get_prop(cur_token, label_data, 'include', True)
+        if not should_include:
+            continue
         cur_anchor = get_anchor(cur_token, label_data)
+        cur_formatted = get_prop(cur_token, label_data, 'formatted')
         cur_xshift = get_xshift(cur_token, label_data)
         cur_yshift = get_yshift(cur_token, label_data)
-        cur_pd = PointData(x=row['x'], y=row['y'], label=cur_token, anchor=cur_anchor,
-                           xshift=cur_xshift, yshift=cur_yshift)
-        #print("cur_pd: " + str(cur_pd))
+        cur_draw_point = get_prop(cur_token, label_data, 'draw_point', True)
+        cur_draw_label = get_prop(cur_token, label_data, 'draw_label', True)
+        cur_pd = PointData(x=row['x'], y=row['y'], label=cur_token,
+                           formatted=cur_formatted,
+                           anchor=cur_anchor,
+                           xshift=cur_xshift, yshift=cur_yshift,
+                           draw_point=cur_draw_point, draw_label=cur_draw_label)
+        if debug:
+            print("cur_pd (PointData): " + str(cur_pd))
         pgf_list.append(cur_pd.pgf_str())
-        point_list.append(cur_pd.point_str())
+        # Point str
+        cur_point_str = cur_pd.point_str(debug=debug)
+        point_list.append(cur_point_str)
         label_list.append(cur_pd.label_str())
     pgf_str = "\n".join(pgf_list)
     point_str = "\n".join(point_list)
@@ -144,8 +190,11 @@ def custom_latex_export(df, label_data=None, arrows=None, floor_ceil=False,
     if floor_ceil:
         pyymax = ceil_half(pyymax)
     tex_start_lims = tikz_start
-    tex_start_lims = tex_start_lims.replace("!pyxmin!",str(pyxmin)).replace("!pyxmax!",str(pyxmax))
-    tex_start_lims = tex_start_lims.replace("!pyymin!",str(pyymin)).replace("!pyymax!",str(pyymax))
+    tex_start_lims = tex_start_lims.replace("!pyxmin!", str(pyxmin)).replace("!pyxmax!", str(pyxmax))
+    tex_start_lims = tex_start_lims.replace("!pyymin!", str(pyymin)).replace("!pyymax!", str(pyymax))
+    # Axis labels
+    tex_start_lims = tex_start_lims.replace("!pyxlabel!", xlabel)
+    tex_start_lims = tex_start_lims.replace('!pyylabel!', ylabel)
     # Extend the axis a bit past the min/max
     pyyrange = pyymax - pyymin
     pyycap = pad_pct * pyyrange
@@ -157,9 +206,9 @@ def custom_latex_export(df, label_data=None, arrows=None, floor_ceil=False,
     # Now the labels
     return_str = return_str + point_str + "\n" + label_str + "\n"
     # And arrows, if any
-    if arrows is not None:
-        for cur_arrow in arrows:
-            arrow_obj = Arrow(cur_arrow[0], cur_arrow[1], cur_arrow[2])
+    if arrow_data is not None:
+        for cur_arrow in arrow_data:
+            arrow_obj = Arrow(cur_arrow['pointA'], cur_arrow['pointB'], cur_arrow['linestyle'], cur_arrow['arrowtype'])
             arrow_str = str(arrow_obj)
             return_str = return_str + arrow_str + "\n"
     return_str = return_str + tikz_end

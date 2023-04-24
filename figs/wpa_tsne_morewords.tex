@@ -4,49 +4,58 @@
 		\begin{axis}[
 		    axis x line=bottom,
 			axis y line=left,
-			xmin=41.865707-1.1466594696044923, xmax=53.332302+1.1466594696044923,
-			ymin=-7.4787655-2.0600139617919924, ymax=13.121373+2.0600139617919924,
-			xtick={41.865707,53.332302},ytick={-7.4787655,13.121373},
-			%xlabel=$x$,ylabel=$y$,
+			xmin=38.852177-1.5218597412109376, xmax=54.070774+1.5218597412109376,
+			ymin=-9.030346-0.8816665649414063, ymax=-0.21368003+0.8816665649414063,
+			xtick={38.852177,54.070774},ytick={-9.030346,-0.21368003},
+			xlabel=$x$,ylabel=$y$,
 			%x label style={anchor=west},
 			%y label style={anchor=south},
 			width=\textwidth
 			]
 			\addplot+[mark options={fill=black,color=black},only marks,point meta=explicit symbolic, nodes near coords] coordinates {
-(49.13072967529297, -5.986298561096191)[]
-(52.73637771606445, -3.596569299697876)[]
-(48.956424713134766, -5.02235221862793)[]
-(43.69905471801758, 3.669151782989502)[]
-(41.86570739746094, 1.229673147201538)[]
-(44.269779205322266, 3.3471872806549072)[]
-(51.684898376464844, 0.012143442407250404)[]
-(53.33230209350586, -0.3879580795764923)[]
-(44.85710525512695, 13.121373176574707)[]
-(48.93000793457031, -7.478765487670898)[]
+(49.807411193847656, -0.21368002891540527)[]
+(53.39361572265625, -3.9610562324523926)[]
+(49.61323547363281, -1.0071290731430054)[]
+(44.17436599731445, -8.286601066589355)[]
+(43.26388931274414, -6.071627140045166)[]
+(45.466773986816406, -9.030345916748047)[]
+(52.86650848388672, -5.140673637390137)[]
+(54.07077407836914, -5.793361663818359)[]
+(38.852176666259766, -8.394489288330078)[]
+(44.7611198425293, -2.535480499267578)[]
+(47.54000473022461, -5.018737316131592)[]
+(43.7191276550293, -7.17911434173584)[]
+
 };
-\node (man) at (axis cs:49.13073, -5.9862986){};
-\node (woman) at (axis cs:52.736378, -3.5965693){};
-\node (master) at (axis cs:48.956425, -5.022352){};
-\node (black) at (axis cs:43.699055, 3.6691518){};
-\node (slave) at (axis cs:41.865707, 1.2296731){};
-\node (white) at (axis cs:44.26978, 3.3471873){};
-\node (child) at (axis cs:51.6849, 0.012143442){};
-\node (baby) at (axis cs:53.332302, -0.38795808){};
-\node (poor) at (axis cs:44.857105, 13.121373){};
-\node (rich) at (axis cs:48.930008, -7.4787655){};
-\node[anchor = north, xshift=0.0, yshift=0.0] (manl) at(axis cs: 49.13073, -5.9862986){$\entpgf{man}$};
-\node[anchor = north, xshift=2.0, yshift=-4.0] (womanl) at(axis cs: 52.736378, -3.5965693){$\entpgf{woman}$};
-\node[anchor = south, xshift=8.0, yshift=2.0] (masterl) at(axis cs: 48.956425, -5.022352){$\entpgf{master}$};
-\node[anchor = south, xshift=0.0, yshift=0.0] (blackl) at(axis cs: 43.699055, 3.6691518){$\entpgf{black}$};
-\node[anchor = south, xshift=0.0, yshift=0.0] (slavel) at(axis cs: 41.865707, 1.2296731){$\entpgf{slave}$};
-\node[anchor = north, xshift=0.0, yshift=0.0] (whitel) at(axis cs: 44.26978, 3.3471873){$\entpgf{white}$};
-\node[anchor = north, xshift=0.0, yshift=0.0] (childl) at(axis cs: 51.6849, 0.012143442){$\entpgf{child}$};
-\node[anchor = north, xshift=0.0, yshift=0.0] (babyl) at(axis cs: 53.332302, -0.38795808){$\entpgf{baby}$};
-\node[anchor = north, xshift=0.0, yshift=0.0] (poorl) at(axis cs: 44.857105, 13.121373){$\entpgf{poor}$};
-\node[anchor = north, xshift=0.0, yshift=0.0] (richl) at(axis cs: 48.930008, -7.4787655){$\entpgf{rich}$};
-\draw[->,dashed,>=stealth,thick,-latex](man) to (woman);
-\draw[->,>=stealth,thick,-latex](master) to (slave);
-\draw[->,>=stealth,thick,-latex](white) to (black);
+\node (man) at (axis cs:49.80741, -0.21368003){};
+\node (woman) at (axis cs:53.393616, -3.9610562){};
+\node (master) at (axis cs:49.613235, -1.0071291){};
+\node (black) at (axis cs:44.174366, -8.286601){};
+\node (slave) at (axis cs:43.26389, -6.071627){};
+\node (white) at (axis cs:45.466774, -9.030346){};
+\node (child) at (axis cs:52.86651, -5.1406736){};
+\node (baby) at (axis cs:54.070774, -5.7933617){};
+\node (poor) at (axis cs:38.852177, -8.394489){};
+\node (rich) at (axis cs:44.76112, -2.5354805){};
+\node (whitemaster) at (axis cs:47.540005, -5.0187373){};
+\node (blackslave) at (axis cs:43.719128, -7.1791143){};
+\node [inner sep=0] (intersect) at (axis cs:51.995144, -2.4997342){};
+\node[anchor = north, xshift=0.0, yshift=-2.0] (manl) at(axis cs: 49.80741, -0.21368003){${\large \entpgf{man}}$};
+\node[anchor = south, xshift=2.0, yshift=0.0] (womanl) at(axis cs: 53.393616, -3.9610562){${\large \entpgf{woman}}$};
+\node[anchor = north, xshift=12.0, yshift=0.0] (masterl) at(axis cs: 49.613235, -1.0071291){$\entpgf{master}$};
+\node[anchor = south, xshift=0.0, yshift=0.0] (blackl) at(axis cs: 44.174366, -8.286601){$\entpgf{black}$};
+\node[anchor = south, xshift=0.0, yshift=0.0] (slavel) at(axis cs: 43.26389, -6.071627){$\entpgf{slave}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (whitel) at(axis cs: 45.466774, -9.030346){$\entpgf{white}$};
+\node[anchor = south, xshift=0.0, yshift=0.0] (childl) at(axis cs: 52.86651, -5.1406736){$\entpgf{child}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (babyl) at(axis cs: 54.070774, -5.7933617){$\entpgf{baby}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (poorl) at(axis cs: 38.852177, -8.394489){$\entpgf{poor}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (richl) at(axis cs: 44.76112, -2.5354805){$\entpgf{rich}$};
+\node[anchor = south, xshift=8.0, yshift=4.0] (whitemasterl) at(axis cs: 47.540005, -5.0187373){${\large \entpgf{white} \bowtie \entpgf{master}}$};
+\node[anchor = south, xshift=0.0, yshift=0.0] (blackslavel) at(axis cs: 43.719128, -7.1791143){${\large \entpgf{black} \bowtie \entpgf{slave}}$};
+\node[anchor = north, xshift=-29.0, yshift=0.0] (intersectl) at(axis cs: 51.995144, -2.4997342){\large $\theta \approx 104.26^\circ$};
+\draw[->,>=stealth,thick,,-latex](man) to (woman);
+\draw[->,>=stealth,thick,,-latex](whitemaster) to (blackslave);
+\draw[-,dashed,>=stealth,thick,](whitemaster) to (intersect);
 
 \end{axis}
 \end{tikzpicture}

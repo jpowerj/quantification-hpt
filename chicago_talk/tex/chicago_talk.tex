@@ -1,0 +1,126 @@
+\documentclass[compress]{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+	\usetheme{Frankfurt}
+	\usecolortheme{default}
+	\usefonttheme{default}
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{caption}[numbered]
+	\setbeamertemplate{footline}[page number]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\DeclareMathOperator*{\argmin}{argmin}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{csquotes}
+%\usepackage[justification=centering]{caption}
+%\usepackage[style=authoryear,backend=biber]{biblatex}
+%%% THIS ADDS THE COMMA BETWEEN AUTHOR NAME AND YEAR
+%\renewcommand*{\nameyeardelim}{\space}
+%\addbibresource{references.bib}
+%\usepackage{caption}
+%\captionsetup{font=scriptsize,labelfont=scriptsize}
+% TiKZ
+%\usepackage{tikz}
+%\usetikzlibrary{bayesnet}
+%\usetikzlibrary{arrows}
+\usepackage{svg}
+
+\setbeamerfont{section in head/foot}{size=\tiny}
+%\setbeamertemplate{section in head/foot}{}
+\setbeamertemplate{subsection in head/foot}{}
+%\setbeamerfont{frametitle}{size=\small}
+
+\title[Meaning, Understanding, Quantification]{Meaning, Understanding, and Quantification in the History of Ideas}
+%\subtitle{}
+\author{\textbf{Jeff Jacobs}\\\small{\texttt{jpj2122@columbia.edu}}}
+%\institute{Columbia University\\\texttt{jpj2122@columbia.edu}}
+\date{\small{University of Chicago}\\\small{April 28, 2023}}
+
+\setbeamertemplate{mini frames}{}
+%
+%\makeatletter
+%%\setlength{\metropolis@frametitle@padding}{1.6ex}% <- default 2.2 ex
+%
+%\setbeamertemplate{headline}{%
+	%	%\begin{beamercolorbox}[wd=\textwidth, sep=1.5ex]{footline}% <- default 3ex
+	%	\begin{beamercolorbox}[wd=\textwidth,sep=3ex]{headline}
+		%		\usebeamerfont{page number in head/foot}%
+		%		\usebeamertemplate*{frame footer}
+		%		\hfill%
+		%		\usebeamertemplate*{frame numbering}
+		%	\end{beamercolorbox}%
+	%}
+%\makeatother
+
+\newcommand\Wider[2][3em]{%
+	\makebox[\linewidth][c]{%
+		\begin{minipage}{\dimexpr\textwidth+#1\relax}
+			\raggedright#2
+		\end{minipage}%
+	}%
+}
+
+\begin{document}
+	{   
+		\setbeamertemplate{section in head/foot shaded}[default][100]
+		\setbeamertemplate{mini frame in other subsection}[default][100]
+		\frame{ % This is the title slide where I'd like to highlight the sections
+			\frametitle{}
+			\setbeamertemplate{footline}{} 
+			\maketitle  
+		}
+		\frame{
+			\frametitle{Overview}
+			\begin{enumerate}
+				\item Comparing Translations: Reitter vs. Moore-Aveling and Fowkes
+				\begin{itemize}
+					\item How did each translation compare to other books of its time?
+					\item How does this translation compare to present-day books?
+					\item Where does this translation fall relative to the previous two?
+				\end{itemize}
+				\item Marx Being Marx or Marx Being German?
+				\begin{itemize}
+					\item How does Marx's language compare with that of his contemporaries?
+					\item Did Marx write like a ``Victorian'' economist, or a German sociologist?
+				\end{itemize}
+				\item Genealogies: \textit{Weltlustig}
+			\end{enumerate}
+		}
+	}
+	
+	\section{Comparing Translations}
+	
+	%\section{References}
+	%\subsection{References}
+	
+	%	\begin{frame}[allowframebreaks]{References}
+		%		%\bibliographystyle{unsrt}
+		%		%\bibliography{references}
+		%		\printbibliography
+		%	\end{frame}
+	%	{   
+		%		\setbeamertemplate{section in head/foot shaded}[default][100]
+		%		\setbeamertemplate{mini frame in other subsection}[default][100]
+		%		\frame{ % This is the title slide where I'd like to highlight the sections
+			%			%\frametitle{}
+			%			\begin{center}
+				%				Thank You!
+				%			\end{center}
+			%			\setbeamertemplate{footline}{}
+			%		}
+		%	}
+\end{document}

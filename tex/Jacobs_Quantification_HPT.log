@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.12.8)  16 APR 2023 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.12.8)  22 APR 2023 15:26
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2143,169 +2143,40 @@ Package pdftex.def Info: ./svg-inkscape/pca_scatter_transformed_svg-tex.pdf , p
 age1 used on input line 56.
 (pdftex.def)             Requested size: 312.85701pt x 312.85623pt.
 ) [43 <./svg-inkscape/pca_scatter_svg-tex.pdf>] [44 <./svg-inkscape/pca_scatter
-_transformed_svg-tex.pdf>] (../figs/wpa_tsne_morewords.tex)
-Package svg Info: Last page of `./svg-inkscape/wpa_embeddings_transformed_svg-t
-ex.pdf' is 6 on input line 911.
+_transformed_svg-tex.pdf>] (../figs/wpa_embeddings_tsne_frozen.tex
 
-(svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf_tex
-<./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, id=2005, page=1, 496.85
-625pt x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf Graphic file (type 
-pdf)
-<use ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf 
-, page1 used on input line 56.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, id=2006, page=2, 496.85
-625pt x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf Graphic file (type 
-pdf)
-<use ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, page 2>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf 
-, page2 used on input line 68.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, id=2007, page=3, 496.85
-625pt x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf Graphic file (type 
-pdf)
-<use ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, page 3>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf 
-, page3 used on input line 70.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, id=2008, page=4, 496.85
-625pt x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf Graphic file (type 
-pdf)
-<use ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, page 4>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf 
-, page4 used on input line 80.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, id=2009, page=5, 496.85
-625pt x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf Graphic file (type 
-pdf)
-<use ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, page 5>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf 
-, page5 used on input line 82.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, id=2010, page=6, 496.85
-625pt x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf Graphic file (type 
-pdf)
-<use ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf, page 6>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf 
-, page6 used on input line 89.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-)
-Package svg Info: Last page of `./svg-inkscape/wpa_embeddings_gender_svg-tex.pd
-f' is 6 on input line 920.
+LaTeX Font Warning: Command \large invalid in math mode on input line 60.
 
-(svg-inkscape/wpa_embeddings_gender_svg-tex.pdf_tex
-<./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, id=2015, page=1, 496.85625pt
- x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf , pag
-e1 used on input line 56.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, id=2016, page=2, 496.85625pt
- x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, page 2>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf , pag
-e2 used on input line 66.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, id=2017, page=3, 496.85625pt
- x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, page 3>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf , pag
-e3 used on input line 68.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, id=2018, page=4, 496.85625pt
- x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, page 4>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf , pag
-e4 used on input line 79.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, id=2019, page=5, 496.85625pt
- x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, page 5>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf , pag
-e5 used on input line 81.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-<./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, id=2020, page=6, 496.85625pt
- x 386.94562pt>
-File: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf, page 6>
-Package pdftex.def Info: ./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf , pag
-e6 used on input line 93.
-(pdftex.def)             Requested size: 469.75502pt x 365.84267pt.
-) [45] [46] [47 <./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf> <./svg-
-inkscape/wpa_embeddings_transformed_svg-tex.pdf
 
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_transformed_sv
-g-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
-> <./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf
+LaTeX Font Warning: Command \large invalid in math mode on input line 60.
 
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_transformed_sv
-g-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
-> <./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf
 
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_transformed_sv
-g-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
-> <./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf
+LaTeX Font Warning: Command \large invalid in math mode on input line 60.
 
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_transformed_sv
-g-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
-> <./svg-inkscape/wpa_embeddings_transformed_svg-tex.pdf
 
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_transformed_sv
-g-tex.pdf): PDF inclusion: multiple pdfs with page group included in a single p
-age
->] [48 <./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf> <./svg-inkscape/wpa_e
-mbeddings_gender_svg-tex.pdf
+LaTeX Font Warning: Command \large invalid in math mode on input line 60.
 
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_gender_svg-tex
-.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf
+) (../figs/wpa_tsne_projected_frozen.tex)
 
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_gender_svg-tex
-.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf
+LaTeX Warning: Reference `fig:wpa-embeddings-gender' on page 45 undefined on in
+put line 917.
 
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_gender_svg-tex
-.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_gender_svg-tex
-.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./svg-inkscape/wpa_embeddings_gender_svg-tex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./svg-inkscape/wpa_embeddings_gender_svg-tex
-.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (../figs/author_bert.tex)
+[45] [46] [47] (../figs/author_bert.tex [48])
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-946.
+947.
 
 (C:\Users\jpjac\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [49]
-[50] [51] [52] [53] [54]
+[50] [51] [52] [53]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[55] [56] [57]
+[54] [55] [56]
 
-LaTeX Warning: Reference `sec:methods-embeddings' on page 58 undefined on input
- line 1063.
+LaTeX Warning: Reference `sec:methods-embeddings' on page 57 undefined on input
+ line 1064.
 
-[58] [59] (../figs/sln_pgm.tex
+[57] [58] (../figs/sln_pgm.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2351,7 +2222,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [60] (../figs/influence_one_way.tikz
+) [59] (../figs/influence_one_way.tikz
 
 Package pgfplots Warning: scatter/classes: can't find class for 'blue'!? Please
  make sure you have specified 'scatter src=explicit symbolic'. Ignoring class '
@@ -2364,50 +2235,50 @@ se make sure you have specified 'scatter src=explicit symbolic'. Ignoring class
  'orange' (this message will not come again). on input line 69.
 
  [warning /pgfplots/warning/scatter classes no such class]
-) [61] (../figs/influence_mutual.tikz) [62] [63]
+) [60] [61] (../figs/influence_mutual.tikz) [62]
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 115
-3.
+4.
 
 (C:\Users\jpjac\AppData\Local\Programs\MiKTeX\tex/latex/bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [64]
-Overfull \hbox (1.05959pt too wide) in paragraph at lines 1180--1183
+) [63]
+Overfull \hbox (1.05959pt too wide) in paragraph at lines 1181--1184
 []\T1/lmr/m/n/10.95 This gen-eral anx-i-ety re-gard-ing the im-por-tance of met
 hod-olog-i-cal in-di-vid-u-al-ism man-i-fests, among
  []
 
-[65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]
-[80]
+[64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[79]
 
 pdfTeX warning: pdflatex.exe (file ../figs/marxism_novelty_resonance.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figs/marxism_novelty_resonance.pdf, id=2449, 893.58844pt x 797.22844pt>
+<../figs/marxism_novelty_resonance.pdf, id=2364, 893.58844pt x 797.22844pt>
 File: ../figs/marxism_novelty_resonance.pdf Graphic file (type pdf)
 <use ../figs/marxism_novelty_resonance.pdf>
 Package pdftex.def Info: ../figs/marxism_novelty_resonance.pdf  used on input l
-ine 1373.
+ine 1374.
 (pdftex.def)             Requested size: 211.38832pt x 188.58951pt.
 
 
 pdfTeX warning: pdflatex.exe (file ../figs/marxism_transience_novelty.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<../figs/marxism_transience_novelty.pdf, id=2450, 579.66562pt x 805.50937pt>
+<../figs/marxism_transience_novelty.pdf, id=2365, 579.66562pt x 805.50937pt>
 File: ../figs/marxism_transience_novelty.pdf Graphic file (type pdf)
 <use ../figs/marxism_transience_novelty.pdf>
 Package pdftex.def Info: ../figs/marxism_transience_novelty.pdf  used on input 
-line 1380.
+line 1381.
 (pdftex.def)             Requested size: 169.1113pt x 234.9929pt.
-[81] [82 <../figs/marxism_novelty_resonance.pdf> <../figs/marxism_transience_no
+[80] [81 <../figs/marxism_novelty_resonance.pdf> <../figs/marxism_transience_no
 velty.pdf>]
 
-LaTeX Warning: Reference `sec:methods-embeddings' on page 83 undefined on input
- line 1401.
+LaTeX Warning: Reference `sec:methods-embeddings' on page 82 undefined on input
+ line 1402.
 
 
-LaTeX Warning: Reference `sec:methods-influence' on page 83 undefined on input 
-line 1401.
+LaTeX Warning: Reference `sec:methods-influence' on page 82 undefined on input 
+line 1402.
 
-[83] [84]
+[82] [83]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2569,24 +2440,24 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[85] [86] [87] [88]
+[84] [85] [86] [87] [88]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 1645.
- [89] [90]
-<../figs/blei_lda.png, id=2527, 469.755pt x 246.9225pt>
+put line 1646.
+ [89]
+<../figs/blei_lda.png, id=2443, 469.755pt x 246.9225pt>
 File: ../figs/blei_lda.png Graphic file (type png)
 <use ../figs/blei_lda.png>
-Package pdftex.def Info: ../figs/blei_lda.png  used on input line 1669.
+Package pdftex.def Info: ../figs/blei_lda.png  used on input line 1670.
 (pdftex.def)             Requested size: 469.75502pt x 246.92188pt.
- [91]
+ [90]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[92 <../figs/blei_lda.png>]
+[91 <../figs/blei_lda.png>]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[93]
+[92] [93]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2651,11 +2522,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[95]
-
-LaTeX Warning: Text page 96 contains only floats.
-
-[96] [97]
+[95] [96]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2668,7 +2535,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-[98]
+[97]
 
 Package biblatex Warning: Split bibliography detected.
 (biblatex)                Many simple split bibliography setups with
@@ -2678,9 +2545,9 @@ Package biblatex Warning: Split bibliography detected.
 (biblatex)                This warning can be suppressed with
 (biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
 
-[99
+[98
 
-] [100] [101] [102] [103] [104] [105] (Jacobs_Quantification_HPT.aux)
+] [99] [100] [101] [102] [103] [104] (Jacobs_Quantification_HPT.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -2689,17 +2556,17 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Jacobs_Quantification_HPT.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 74481005EBF972703FE27C2D5B02EA57;6200.
+(rerunfilecheck)             Checksum: 2027E5C4E8F223150AD829EF73B53863;6200.
 Package logreq Info: Writing requests to 'Jacobs_Quantification_HPT.run.xml'.
 \openout1 = `Jacobs_Quantification_HPT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55458 strings out of 478614
- 1316063 string characters out of 2843122
- 2109083 words of memory out of 3000000
- 72132 multiletter control sequences out of 15000+600000
- 625803 words of font info for 135 fonts, out of 8000000 for 9000
+ 55477 strings out of 478614
+ 1314654 string characters out of 2843122
+ 2109431 words of memory out of 3000000
+ 72159 multiletter control sequences out of 15000+600000
+ 625429 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,23n,130p,2724b,2768s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
@@ -2707,8 +2574,8 @@ c}{C:/Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
 c}{C:/Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <
 C:\Users\jpjac\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi657\bbm10.pk>
 {C:/Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/
-Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Use
-rs/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Use
+Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/
+Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Use
 rs/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Use
 rs/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Use
 rs/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/User
@@ -2716,6 +2583,7 @@ s/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users
 /jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/User
 s/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/User
 s/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/User
+s/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/User
 s/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users
 /jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/
 jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/j
@@ -2745,9 +2613,9 @@ ograms/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/jpjac/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/jpjac/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb><C:/Users/jpjac
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect9.pfb>
-Output written on Jacobs_Quantification_HPT.pdf (105 pages, 2753372 bytes).
+Output written on Jacobs_Quantification_HPT.pdf (104 pages, 2742346 bytes).
 PDF statistics:
- 2912 PDF objects out of 2984 (max. 8388607)
- 387 named destinations out of 1000 (max. 500000)
- 408 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2832 PDF objects out of 2984 (max. 8388607)
+ 385 named destinations out of 1000 (max. 500000)
+ 338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

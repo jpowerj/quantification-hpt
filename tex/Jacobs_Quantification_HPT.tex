@@ -140,7 +140,7 @@ uniquename=init,
 	\maketitle
 	
 \begin{abstract}
-\noindent What are political thinkers \textit{doing} with their words when they write a text, engage in a debate, or give a speech? We propose a ``computational political theory'', pairing recent breakthroughs in computational linguistics with the hermeneutic practices of intellectual history, as a set of tools for mapping out the political-discursive fields within which ideas circulate. We show, via a series of historical case studies, how a particular class of computational-linguistic algorithms called word embeddings are able to capture subtle differences in how authors employ certain contested terms (liberty, freedom, sovereignty, etc.) by explicitly modeling both the words and the contexts they're used in across a corpus of texts. We discuss throughout the utility of modern context-sensitive language models as tools for historical research, and provide a framework for their use in developing, testing, and revising our understandings of key questions in the history of political thought.
+\noindent What are political thinkers \textit{doing} with their words when they write a text, engage in a debate, or give a speech? We propose a ``computational political theory'', pairing recent breakthroughs in computational linguistics with the hermeneutic practices of intellectual history, as a set of tools for mapping out the political-discursive fields within which ideas circulate. We show, via a series of historical case studies, how a particular class of computational-linguistic algorithms called word embeddings are able to capture subtle differences in how authors employ certain contested terms (liberty, freedom, sovereignty, etc.) by explicitly modeling both the words and the contexts they're used in across a corpus of texts. We argue that these context-sensitive language models thus represent powerful and underutilized tools for historical research, and provide a framework for their use in developing, testing, and revising our understandings of key questions in the history of political thought.
 \end{abstract}
 
 \doublespacing
@@ -901,26 +901,27 @@ To see the usefulness of this method in practice, we start by computing two-dime
 
 \begin{figure}[ht!]
 	\centering
-	\input{../figs/wpa_tsne_morewords.tex}
+	\input{../figs/wpa_embeddings_tsne_frozen.tex}
 	\caption{A two-dimensional embedding space trained on the WPA Slave Narratives corpus, where we draw solid arrows connecting points for key racial terms (``white'' and ``black'') and for terms denoting status within the slave system (``slave'' and ``master''), along with a dashed arrow connecting points for gendered terms (``man'' and ``woman'').}
 	\label{fig:wpa-embeddings}
 \end{figure}
 
 \begin{figure}[ht!]
 \centering
-\includesvg[width=\textwidth]{../figs/wpa_embeddings_transformed.svg}
-\caption{The same points displayed in Figure \ref{fig:wpa-embeddings}, but transformed so that the horizontal axis represents the black-to-white direction within the space, and the vertical represents the slave-to-master direction.}
+%\includesvg[width=\textwidth]{../figs/wpa_embeddings_transformed.svg}
+\input{../figs/wpa_tsne_projected_frozen.tex}
+\caption{The same points displayed in Figure \ref{fig:wpa-embeddings}, but transformed so that the horizontal axis represents the white-to-black direction within the space ($\entity{white} \bowtie \entity{master}$ on the left, $\entity{black} \bowtie \entity{slave}$ on the right), and the vertical represents the man-to-woman direction (\entity{man} below, \entity{woman} above).}
 \label{fig:wpa-embeddings-transformed}
 \end{figure}
 
 Interestingly, after performing this translation, we can observe a second emergent feature of the word vectors' orientation: although in the original plot the move from ``woman'' to ``man'' seemed to be broadly similar to the move from ``white'' to ``master'' or ``black'' to ``slave'', once we differentiate the latter pairs by choosing them to be the horizontal and vertical axes (respectively), we can see that in fact the ``woman'' to ``man'' direction is \textit{diagonal} with respect to this new orientation---as we observed in our theoretical example above, this indicates that perhaps our analysis could benefit even more from setting the vertical axis to represent gender, as illustrated in Figure \ref{fig:wpa-embeddings-gender}.
 
-\begin{figure}[ht!]
-\centering
-\includesvg[width=\textwidth]{../figs/wpa_embeddings_gender.svg}
-\caption{The same embedding space as in Figures \ref{fig:wpa-embeddings} and \ref{fig:wpa-embeddings-transformed}, with the vertical axis now transformed to represent the man-to-woman direction, and with additional key terms plotted to enable analysis of their interrelationships with respect to these two sociologically-meaningful dimensions.}
-\label{fig:wpa-embeddings-gender}
-\end{figure}
+%\begin{figure}[ht!]
+%\centering
+%\includesvg[width=\textwidth]{../figs/wpa_embeddings_gender.svg}
+%\caption{The same embedding space as in Figures \ref{fig:wpa-embeddings} and \ref{fig:wpa-embeddings-transformed}, with the vertical axis now transformed to represent the man-to-woman direction, and with additional key terms plotted to enable analysis of their interrelationships with respect to these two sociologically-meaningful dimensions.}
+%\label{fig:wpa-embeddings-gender}
+%\end{figure}
 
 The arbitrariness of the $(x,y)$ coordinates, and thus the impetus for employing PCA as one possibility for deriving \textit{meaningful} coordinates instead, is important enough to re-emphasize here: since the word embedding algorithms don't know the particular types of meaning we hope to capture, the coordinates generated for each word have no \textit{a priori} human-interpretable meaning at all; they are chosen solely on the basis of placing words closer together or further apart based on the similarity or difference between the contexts they appear in. In a 2D space, for example, if \textit{gavagai}'s initial embedding (typically randomly-chosen) lies directly below that of \textit{bird} and directly above that of \textit{fish}, but the algorithm observes \textit{gavagai} being used in a context which shows it is neither of these animals, the only way to increase its distance from \textit{both} points is to move \textit{gavagai}'s embedding left or right, i.e., to modify its $y$ coordinate. Since the same logic holds in cases where the three points randomly start out e.g. in a horizontal line (\textit{gavagai}'s embedding would have to be moved up or down), or on the $x$-$y$ diagonal (its embedding would have to be moved along the off-diagonal), we can see that the coordinates themselves have no stable or human-interpretable meaning on their own. It is up to the researcher to choose---on the basis of their research goals and/or intuitions regarding their field of study---how to transform the data to make sense of the embedding algorithm's outputs. Thus we have another example of how, as emphasized above, these algorithms do not \textit{automate} social-scientific research, but \textit{do} provide a powerful addition to the researcher's toolbox, to be used in conjunction with their own domain knowledge and expertise.
 

@@ -1,0 +1,123 @@
+---
+title: "Cultural Dimensions"
+author: "Jeff Jacobs"
+format: html
+editor: visual
+---
+
+## Kozlowski et al data
+
+```{r, setup}
+library(ggplot2)
+library(readr)
+library(dplyr)
+```
+
+```{r}
+survey<- readr::read_csv(file="../data/survey_means_weighted.csv", show_col_types=FALSE)
+df<- readr::read_csv(file="../data/GoogleNews_Embedding.csv", show_col_types=FALSE)
+#df<-read.csv(file="/DIRECTORY/US_Ngrams_2000_12.csv", header=TRUE,row.names=1, sep=",")
+```
+
+```{r}
+#####DEFINE FUNCTIONS##########
+#Calculate norm of vector#
+norm_vec <- function(x) sqrt(sum(x^2))
+
+#Dot product#
+dot <- function(x,y) (sum(x*y))
+
+#Cosine Similarity#
+cos <- function(x,y) dot(x,y)/norm_vec(x)/norm_vec(y)
+
+#Normalize vector#
+nrm <- function(x) x/norm_vec(x)
+
+#Calculate semantic dimension from antonym pair#
+dimension<-function(x,y) nrm(nrm(x)-nrm(y))
+```
+
+```{r}
+###STORE EMBEDDING AS MATRIX, NORMALIZE WORD VECTORS###
+cdfm<-as.matrix(data.frame(df))
+cdfmn<-t(apply(cdfm,1,nrm))
+```
+
+```{r}
+###IMPORT LISTS OF TERMS TO PROJECT AND ANTONYM PAIRS#####
+ant_pairs_aff <- read.csv("../data/word_pairs/affluence_pairs.csv",header=FALSE, stringsAsFactor=F)
+ant_pairs_gen <- read.csv("../data/word_pairs/gender_pairs.csv",header=FALSE, stringsAsFactor=F)
+ant_pairs_race <- read.csv("../data/word_pairs/race_pairs.csv",header=FALSE, stringsAsFactor=F)
+```
+
+```{r}
+###SETUP "make_dim" FUNCTION, INPUT EMBEDDING AND ANTONYM PAIR LIST#######
+###OUTPUT AVERAGE SEMANTIC DIMENSION###
+
+make_dim <- function(embedding, pairs) {
+  dim_list <- list()
+  #word_dims <- data.frame(matrix(NA,nrow(pairs),300))
+  for (i in nrow(pairs)) {
+    word1 <- pairs[i,1]
+    word2 <- pairs[i,2]
+    w1_emb <- embedding %>% filter("...1" == word1)
+    w2_emb <- embedding %>% filter("...1" == word2)
+    pair_dim <- dimension(w1_emb, w2_emb)
+    dim_list[[i]] = pair_dim
+  }
+  return(dim_list)
+}
+```
+
+```{r}
+word_dims <- make_dim(df, ant_pairs_aff)
+# And normalize the dim_list
+dim_mean <- colMeans(word_dims, na.rm = TRUE)
+dim_mean_norm <- nrm(dim_ave)
+```
+
+```{r}
+#####CONSTRUCT AFFLUENCE, GENDER, AND RACE DIMENSIONS######
+#aff_dim<-make_dim(df, ant_pairs_aff)
+#word_dims <- data.frame(matrix(NA,nrow(ant_pairs_aff),300))
+#for (j in 1:nrow(pairs)){
+test_word1 <- ant_pairs_aff[1,1]
+test_word2 <- ant_pairs_aff[1,2]
+```
+
+```{r}
+dimension(df[test_word1,], df[test_word2,])
+```
+
+```{r}
+tryCatch(
+  word_dims[j,] <- dimension(embedding[rp_word1,], embedding[rp_word2,]),
+  error=function(e){}
+)
+dim_ave <- colMeans(word_dims, na.rm = TRUE)
+dim_ave_n <- nrm(dim_ave)
+```
+
+```{r}
+gender_dim<-make_dim(df, ant_pairs_gen)
+race_dim<-make_dim(df, ant_pairs_race)
+```
+
+```{r}
+####ANGLES BETWEEN DIMENSIONS#######
+cos(aff_dim,gender_dim)
+cos(aff_dim,race_dim)
+cos(gender_dim,race_dim)
+```
+
+```{r}
+
+####CALCULATE PROJECTIONS BY MATRIX MULTIPLICATION####
+###(Equivalent to cosine similarity because vectors are normalized)###
+aff_proj<-cdfmn%*%aff_dim
+gender_proj<-cdfmn%*%gender_dim
+race_proj<-cdfmn%*%race_dim
+
+projections_df<-cbind(aff_proj, gender_proj, race_proj)
+colnames(projections_df)<-c("aff_proj","gender_proj","race_proj")
+```
