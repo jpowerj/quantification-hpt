@@ -24,29 +24,29 @@ Reallocating 'field_info' (item size: 4) to 19560 items.
 Database file #1: Jacobs_Quantification_HPT-blx.bib
 Database file #2: HPT.bib
 Reallocating 'str_pool' (item size: 1) to 130000 items.
-Biblatex version: 3.17
+Biblatex version: 3.19
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 You've used 104 entries,
             6399 wiz_defined-function locations,
-            2070 strings with 117529 characters,
-and the built_in function-call counts, 788222 in all, are:
-= -- 56164
+            2070 strings with 117531 characters,
+and the built_in function-call counts, 788234 in all, are:
+= -- 56165
 > -- 22284
 < -- 5363
 + -- 27052
 - -- 12489
-* -- 53662
-:= -- 81646
+* -- 53663
+:= -- 81648
 add.period$ -- 0
 call.type$ -- 104
 change.case$ -- 3179
 chr.to.int$ -- 1158
 cite$ -- 206
 duplicate$ -- 79641
-empty$ -- 68217
+empty$ -- 68218
 format.name$ -- 6166
-if$ -- 157998
+if$ -- 158001
 int.to.chr$ -- 0
 int.to.str$ -- 338
 missing$ -- 0
@@ -56,9 +56,9 @@ pop$ -- 36921
 preamble$ -- 1
 purify$ -- 3539
 quote$ -- 0
-skip$ -- 22501
+skip$ -- 22502
 stack$ -- 0
-substring$ -- 98458
+substring$ -- 98461
 swap$ -- 20567
 text.length$ -- 3271
 text.prefix$ -- 103

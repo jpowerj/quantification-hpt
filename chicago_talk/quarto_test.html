@@ -262,6 +262,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -358,8 +359,16 @@ Jeff Jacobs
 </div>
 
 </section>
-<section id="background-word-counts" class="slide level2 smaller">
-<h2>Background: Word Counts?</h2>
+<section id="section-1" class="slide level2" style="display: flex !important; height: 100%; flex-direction: column;">
+<h2></h2>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+<h1>
+Section 1: Background
+</h1>
+</div>
+</section>
+<section id="word-counts-good-enough" class="slide level2 smaller">
+<h2>Word Counts: Good Enough?</h2>
 <ul>
 <li>4 keywords per section:</li>
 </ul>
@@ -456,7 +465,7 @@ Jeff Jacobs
 <div class="callout-content">
 <p><span class="biggerest"><em>You shall know a word by the company it keeps.</em></span></p>
 <div class="align-right">
-<p><span class="citation" data-cites="firth_papers_1957">(<a href="#/thank-you" role="doc-biblioref" onclick="">Firth 1957</a>)</span></p>
+<p><span class="citation" data-cites="firth_papers_1957">(<a href="#/references" role="doc-biblioref" onclick="">Firth 1957</a>)</span></p>
 </div>
 </div>
 </div>
@@ -478,24 +487,24 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="the-cambridge-school-and-contextual-history" class="slide level2 smaller">
-<h2>The Cambridge School and Contextual History</h2>
+<section id="the-cambridge-school-and-contextual-history" class="slide level2 smaller nostretch">
+<h2><span style="font-size: 80%!important;">The Cambridge School and Contextual History</span></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:51%;">
 <ul>
-<li>What are political actors <em>doing</em> with their words?
+<li>What are political actors <em>doing</em> with words?
 <ul>
-<li>“condemning, opposing, resisting, demanding, beseeching, supporting, rewarding […] attacking, expelling, cursing, cheering, singing” <span class="citation" data-cites="tilly_contentious_2008">(<a href="#/thank-you" role="doc-biblioref" onclick="">Tilly 2008</a>)</span></li>
+<li>“condemning, opposing, resisting, demanding, beseeching, supporting, rewarding […] attacking, expelling, cursing, cheering, singing” <span class="citation" data-cites="tilly_contentious_2008">(<a href="#/references" role="doc-biblioref" onclick="">Tilly 2008</a>)</span></li>
 </ul></li>
 </ul>
 <!-- > "a battle, a struggle, a place and an instrument of confrontation, a weapon of power, of control, of subjection, of qualification and of disqualification." Foucault -->
 <center>
-<p><img data-src="weapon.jpg" style="width:75.0%"></p>
+<p><img data-src="weapon.jpg" style="padding-top: 0!important; margin-top: 0!important;;width:75.0%"></p>
 <div class="tinytext">
 <p>(<em><a href="https://m.media-amazon.com/images/I/718Qs8cDcRL.jpg">Image source</a></em>)</p>
 </div>
 </center>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:49%;">
 <center>
 <p><img data-src="austin.jpg" style="width:66.0%"></p>
 <div class="tinytext">
@@ -507,7 +516,7 @@ Jeff Jacobs
 </section>
 <section id="illocutions-and-perlocutions" class="slide level2 smaller">
 <h2>Illocutions and Perlocutions</h2>
-<div class="columns" style="display: flex !important; height: 100%;">
+<div class="columns" style="display: flex !important; height: 85%;">
 <div class="column" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 <center>
 <img data-src="manifesto.jpg">
@@ -517,7 +526,7 @@ Jeff Jacobs
 </center>
 </div><div class="column" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
 <center>
-<img data-src="tiers_etat.jpg" class="r-stretch" style="width:80.0%">
+<img data-src="tiers_etat.jpg" class="r-stretch" style="width:100.0%">
 </center>
 </div>
 </div>
@@ -530,7 +539,7 @@ Section 2: Models of Meaning and Context
 </h1>
 </div>
 </section>
-<section id="raw-word-embeddings" class="slide level2">
+<section id="raw-word-embeddings" class="slide level2 smaller">
 <h2>Raw Word Embeddings</h2>
 <ul>
 <li>What do they “mean”?</li>
@@ -539,7 +548,7 @@ Section 2: Models of Meaning and Context
 <img data-src="wpa_embeddings_tsne_frozen_export.svg">
 </center>
 </section>
-<section id="manually-projected-word-embeddings" class="slide level2">
+<section id="manually-projected-word-embeddings" class="slide level2 smaller">
 <h2>Manually-Projected Word Embeddings</h2>
 <ul>
 <li>Researcher <em>imposes meaning</em></li>
@@ -548,9 +557,47 @@ Section 2: Models of Meaning and Context
 <img data-src="wpa_tsne_projected_frozen_export.svg">
 </center>
 </section>
+<section id="clustered-word-embeddings" class="slide level2 smaller">
+<h2>Clustered Word Embeddings</h2>
+<ul>
+<li>Continuous Spectra <span class="math inline">\(\rightarrow\)</span> Discrete Clusters</li>
+</ul>
+<center>
+<img data-src="author_bert_standalone.svg" style="height:10.0%">
+</center>
+</section>
 <section id="the-geometry-of-political-thought" class="slide level2">
 <h2>The Geometry of Political Thought</h2>
-<p>Hobbes</p>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><span class="bigish"><em>Hobbes’s analysis of <strong>liberty</strong> in</em> Leviathan <em>represents not a revision but a <strong>repudiation</strong> of what he had earlier argued, […] a <strong>substantial change</strong> in the character of his moral thought.</em></span></p>
+<div class="align-right">
+<p><span class="citation" data-cites="skinner_hobbes_2008">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 2008, xvi</a>)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><span class="bigish"><em>The 1844 Marx was still operating within <strong>the ideological field of Young Hegelianism.</strong></em></span></p>
+<div class="align-right">
+<p><span class="citation" data-cites="lowy_theory_1973">(<a href="#/references" role="doc-biblioref" onclick="">Löwy 1973, 104</a>)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><span class="bigish"><em>[Khomeini] now <strong>used [mostazafin] to mean</strong> the angry ‘oppressed masses’, a meaning it had <strong>acquired in the early 1960s</strong> when [Ali] Shariati and his disciples translated Franz Fanon’s</em> The Wretched of the Earth <em>as</em> Mostazafin-e Zamin.</span></p>
+<div class="align-right">
+<p><span class="citation" data-cites="abrahamian_khomeinism_1993">(<a href="#/references" role="doc-biblioref" onclick="">Abrahamian 1993, 47</a>)</span></p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="constructing-contextual-fields" class="slide level2">
 <h2>Constructing Contextual Fields</h2>
@@ -558,12 +605,9 @@ Section 2: Models of Meaning and Context
 <li>Word2Vec</li>
 <li>BERT</li>
 </ul>
-</section>
-<section id="visualizing-contextual-fields" class="slide level2">
-<h2>Visualizing Contextual Fields</h2>
-<ul>
-<li>WPA Slavery Archive</li>
-</ul>
+<!--    \caption{A visualization of \BERT{}'s ability to model the different contexts (and thus, senses) in which words are used by different authors. In this case \texttt{interference} falls squarely within the negative liberty (liberty as non-interference) cluster, as a term central to distinguishing negative from other forms of liberty, whereas \texttt{absence} falls between two clusters as it can be employed in both republican (``absence of arbitrary power'') and negative-liberty (``absence of interference'') contexts.}
+    \label{fig:bert-author}
+\end{figure} -->
 </section>
 <section id="the-empirics-of-influence-historical-sketches" class="slide level2">
 <h2>The Empirics of Influence: Historical Sketches</h2>
@@ -576,32 +620,77 @@ Section 2: Models of Meaning and Context
 </ul></li>
 </ul>
 </section>
-<section id="text-mining-influence-claims" class="slide level2">
+<section id="text-mining-influence-claims" class="slide level2 smaller">
 <h2>Text-Mining Influence Claims</h2>
 <ul>
-<li>X influenced Y?</li>
+<li>“<span class="math inline">\(X\)</span> influenced <span class="math inline">\(Y\)</span>”? Let’s zoom in on <strong>mechanisms</strong>:</li>
 </ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><strong>Collaboration</strong>: “Karl Marx and Friedrich Engels carried on one of the great intellectual collaborations in the history of scientific research.” <span class="citation" data-cites="gandy_marx_1979">(<a href="#/references" role="doc-biblioref" onclick="">Gandy 1979, ii</a>)</span> <!-- * $\newcommand{\entity}[1]{\small \verb+#1+} \implies \textsf{Collaboration}(\entity{Karl Marx}, \text{ }\entity{Friedrich Engels})$ --></li>
+<li><strong>Mentorship</strong>: for example, “the grandly-titled was begun in 1915 following Wittgenstein’s tenure at Cambridge under [Bertrand] Russell’s mentorship” <span class="citation" data-cites="wright_schoenberg_2006">(<a href="#/references" role="doc-biblioref" onclick="">Wright 2006, 72</a>)</span> <!-- * $\implies \textsf{Mentorship}(\entity{Bertrand Russell},\text{ }\entity{Ludwig Wittgenstein})$ --></li>
+<li><strong>Reading</strong>: for example, ``Not only had Marx read Hegel’s in 1858, but we know that he studied it once again in 1860.’’ <span class="citation" data-cites="dussel_unknown_2002">(<a href="#/references" role="doc-biblioref" onclick="">Dussel 2002, 195</a>)</span> <!-- * $\implies \textsf{Reading}(\entity{Karl Marx},\text{ } \entity{G.W.F. Hegel})$ --></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><strong>Shared Intellectual Community</strong>: “Schelling and Hegel first met at the Tübingen Seminary in 1790, and the two young men shared a room there during their student years” <span class="citation" data-cites="levine_divergent_2006">(<a href="#/references" role="doc-biblioref" onclick="">Levine 2006, 124</a>)</span> <!-- * $\implies \textsf{Shared-Intellectual-Community}(\entity{F.W.J. Schelling},\text{ }\entity{G.W.F. Hegel})$ --></li>
+<li><strong>Shared Geography</strong>: for example, ``Lenin was an occasional visitor in Vienna. Hitler, like Trotsky, had lived there for years.” <span class="citation" data-cites="morton_thunder_1990">(<a href="#/references" role="doc-biblioref" onclick="">Morton 1990, 290</a>)</span> <!-- * $\implies \textsf{Shared-Geography}(\entity{V.I. Lenin},\text{ }\entity{Adolf Hitler})$ --></li>
+<li><strong>Rivalry</strong>: for example, ``the cultural philosophy of the Historical School and, more particularly, of Hegel’s rival at the University of Berlin, Friedrich Schleiermacher.” <span class="citation" data-cites="toews_hegelianism_1985">(<a href="#/references" role="doc-biblioref" onclick="">Toews 1985, 7</a>)</span> <!-- * $\implies \textsf{Rivalry}(\entity{G.W.F. Hegel},\text{ }\entity{Friedrich Schleiermacher})$ --></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="the-point-is-to-change-it" class="slide level2">
 <h2>The Point is To Change It</h2>
 <ul>
-<li>Theoretical Innovation -(?)-&gt; Political Practice</li>
+<li>Theoretical Innovation <span class="math inline">\(\overset{?}{\longleftrightarrow}\)</span> Political Practice</li>
 </ul>
 </section>
-<section id="thank-you" class="slide level2 smaller scrollable">
+<section id="thank-you" class="slide level2">
 <h2>Thank You!</h2>
 <ul>
 <li>Questions?</li>
 </ul>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
 <div class="footer footer-default">
 
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-abrahamian_khomeinism_1993" class="csl-entry" role="listitem">
+Abrahamian, Ervand. 1993. <em>Khomeinism: <span>Essays</span> on the <span>Islamic Republic</span></em>. <span>University of California Press</span>.
+</div>
+<div id="ref-dussel_unknown_2002" class="csl-entry" role="listitem">
+Dussel, Enrique. 2002. <em>Towards <span>An Unknown Marx</span>: <span>A Commentary</span> on the <span>Manuscripts</span> of 1861-63</em>. <span>Routledge</span>.
+</div>
 <div id="ref-firth_papers_1957" class="csl-entry" role="listitem">
 Firth, John Rupert. 1957. <em>Papers in <span>Linguistics</span>, 1934-1951</em>. <span>Oxford University Press</span>.
 </div>
+<div id="ref-gandy_marx_1979" class="csl-entry" role="listitem">
+Gandy, D. Ross. 1979. <em>Marx and <span>History</span>: <span>From Primitive Society</span> to the <span>Communist Future</span></em>. <span>University of Texas Press</span>.
+</div>
+<div id="ref-levine_divergent_2006" class="csl-entry" role="listitem">
+Levine, Norman. 2006. <em>Divergent <span>Paths</span>: <span>The Hegelian</span> Foundations of <span>Marx</span>’s Method</em>. <span>Lanham, MD</span>: <span>Lexington Books</span>.
+</div>
+<div id="ref-lowy_theory_1973" class="csl-entry" role="listitem">
+Löwy, Michael. 1973. <em>The <span>Theory</span> of <span>Revolution</span> in the <span>Young Marx</span></em>. <span>London</span>: <span>Brill</span>.
+</div>
+<div id="ref-morton_thunder_1990" class="csl-entry" role="listitem">
+Morton, Frederic. 1990. <em>Thunder at <span>Twilight</span>: <span>Vienna</span> 1913/1914</em>. <span>Collier Books</span>.
+</div>
+<div id="ref-skinner_hobbes_2008" class="csl-entry" role="listitem">
+Skinner, Quentin. 2008. <em>Hobbes and <span>Republican Liberty</span></em>. <span>Cambridge University Press</span>.
+</div>
 <div id="ref-tilly_contentious_2008" class="csl-entry" role="listitem">
 Tilly, Charles. 2008. <em>Contentious <span>Performances</span></em>. <span>New York</span>: <span>Cambridge University Press</span>.
+</div>
+<div id="ref-toews_hegelianism_1985" class="csl-entry" role="listitem">
+Toews, John Edward. 1985. <em>Hegelianism: <span>The Path Toward Dialectical Humanism</span>, 1805-1841</em>. <span>Cambridge University Press</span>.
+</div>
+<div id="ref-wright_schoenberg_2006" class="csl-entry" role="listitem">
+Wright, James Kenneth. 2006. <em>Schoenberg, <span>Wittgenstein</span> and the <span>Vienna Circle</span></em>. <span>Peter Lang</span>.
 </div>
 </div>
 </section>

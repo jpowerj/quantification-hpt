@@ -5,6 +5,7 @@ institute: "University of Chicago, April 28, 2023"
 format:
   revealjs:
     theme: [default, jj_custom.scss]
+    scrollable: true
 jupyter: python3
 editor:
   render-on-save: true
@@ -16,7 +17,13 @@ import pandas as pd
 import numpy as np
 ```
 
-## Background: Word Counts? {.smaller}
+## {#section-1 style='display: flex !important; height: 100%; flex-direction: column;'}
+
+::: {style='display: flex; flex-direction: column; align-items: center; justify-content: center;'}
+<h1>Section 1: Background</h1>
+:::
+
+## Word Counts: Good Enough? {.smaller}
 
 * 4 keywords per section:
 
@@ -76,18 +83,18 @@ import numpy as np
 :::
 :::
 
-## The Cambridge School and Contextual History {.smaller}
+## [The Cambridge School and Contextual History]{style='font-size: 80%!important;'} {.smaller .nostretch}
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="51%"}
 
-* What are political actors *doing* with their words?
+* What are political actors *doing* with words?
   * "condemning, opposing, resisting, demanding, beseeching, supporting, rewarding [...] attacking, expelling, cursing, cheering, singing" [@tilly_contentious_2008] 
 
 <!-- > "a battle, a struggle, a place and an instrument of confrontation, a weapon of power, of control, of subjection, of qualification and of disqualification." Foucault -->
 
 <center>
-![](weapon.jpg){width="75%"}
+![](weapon.jpg){width="75%" style="padding-top: 0!important; margin-top: 0!important;"}
 
 ::: {.tinytext}
 (*[Image source](https://m.media-amazon.com/images/I/718Qs8cDcRL.jpg)*)
@@ -96,7 +103,7 @@ import numpy as np
 </center>
 
 :::
-::: {.column width="50%"}
+::: {.column width="49%"}
 
 <center>
 ![](austin.jpg){width="66%"}
@@ -112,7 +119,7 @@ import numpy as np
 
 ## Illocutions and Perlocutions {.smaller}
 
-::: {.columns style='display: flex !important; height: 100%;'}
+::: {.columns style='display: flex !important; height: 85%;'}
 ::: {.column width="50%" style='display: flex; flex-direction: column; justify-content: center; align-items: center;'}
 
 <center>
@@ -127,7 +134,7 @@ import numpy as np
 ::: {.column width="50%" style='display: flex; flex-direction: column; justify-content: center; align-items: center;'}
 
 <center>
-![](tiers_etat.jpg){.r-stretch width="80%"}
+![](tiers_etat.jpg){.r-stretch width="100%"}
 </center>
 
 :::
@@ -139,7 +146,7 @@ import numpy as np
 <h1>Section 2: Models of Meaning and Context</h1>
 :::
 
-## Raw Word Embeddings
+## Raw Word Embeddings {.smaller}
 
 * What do they "mean"?
 
@@ -147,7 +154,7 @@ import numpy as np
 ![](wpa_embeddings_tsne_frozen_export.svg)
 </center>
 
-## Manually-Projected Word Embeddings
+## Manually-Projected Word Embeddings {.smaller}
 
 * Researcher *imposes meaning*
 
@@ -155,18 +162,50 @@ import numpy as np
 ![](wpa_tsne_projected_frozen_export.svg)
 </center>
 
+## Clustered Word Embeddings {.smaller}
+
+* Continuous Spectra $\rightarrow$ Discrete Clusters
+
+<center>
+![](author_bert_standalone.svg){height="10%"}
+</center>
+
 ## The Geometry of Political Thought
 
-Hobbes
+::: {.callout-note appearance="minimal"}
+[*Hobbes's analysis of **liberty** in* Leviathan *represents not a revision but a **repudiation** of what he had earlier argued, [...] a **substantial change** in the character of his moral thought.*]{.bigish}
+
+::: {.align-right}
+[@skinner_hobbes_2008, p. xvi]
+:::
+:::
+
+::: {.callout-note appearance="minimal"}
+[*The 1844 Marx was still operating within **the ideological field of Young Hegelianism.***]{.bigish}
+
+::: {.align-right}
+[@lowy_theory_1973, p. 104]
+:::
+:::
+
+::: {.callout-note appearance="minimal"}
+[*[Khomeini] now **used [mostazafin] to mean** the angry 'oppressed masses', a meaning it had **acquired in the early 1960s** when [Ali] Shariati and his disciples translated Franz Fanon's* The Wretched of the Earth *as* Mostazafin-e Zamin.]{.bigish}
+
+::: {.align-right}
+[@abrahamian_khomeinism_1993, p. 47]
+:::
+:::
 
 ## Constructing Contextual Fields
 
 * Word2Vec
 * BERT
 
-## Visualizing Contextual Fields
 
-* WPA Slavery Archive
+
+<!-- 	\caption{A visualization of \BERT{}'s ability to model the different contexts (and thus, senses) in which words are used by different authors. In this case \texttt{interference} falls squarely within the negative liberty (liberty as non-interference) cluster, as a term central to distinguishing negative from other forms of liberty, whereas \texttt{absence} falls between two clusters as it can be employed in both republican (``absence of arbitrary power'') and negative-liberty (``absence of interference'') contexts.}
+	\label{fig:bert-author}
+\end{figure} -->
 
 ## The Empirics of Influence: Historical Sketches
 
@@ -175,14 +214,39 @@ Hobbes
   * Text-Mining Influence Claims
   * History of Marxism
 
-## Text-Mining Influence Claims
+## Text-Mining Influence Claims {.smaller}
 
-* X influenced Y?
+* "$X$ influenced $Y$"? Let's zoom in on **mechanisms**:
+
+::: columns
+::: {.column width="50%"}
+
+* **Collaboration**: "Karl Marx and Friedrich Engels carried on one of the great intellectual collaborations in the history of scientific research." [@gandy_marx_1979, p. ii]
+  <!-- * $\newcommand{\entity}[1]{\small \verb+#1+} \implies \textsf{Collaboration}(\entity{Karl Marx}, \text{ }\entity{Friedrich Engels})$ -->
+* **Mentorship**: for example, "the grandly-titled \textit{Tractatus Logico-Philosophicus} was begun in 1915 following Wittgenstein's tenure at Cambridge under [Bertrand] Russell's mentorship" [@wright_schoenberg_2006, p. 72]
+  <!-- * $\implies \textsf{Mentorship}(\entity{Bertrand Russell},\text{ }\entity{Ludwig Wittgenstein})$ -->
+* **Reading**: for example, ``Not only had Marx read Hegel's \textit{Logic} in 1858, but we know that he studied it once again in 1860.'' [@dussel_unknown_2002, p. 195]
+  <!-- * $\implies \textsf{Reading}(\entity{Karl Marx},\text{ } \entity{G.W.F. Hegel})$ -->
+
+:::
+::: {.column width="50%"}
+
+* **Shared Intellectual Community**: "Schelling and Hegel first met at the Tübingen Seminary in 1790, and the two young men shared a room there during their student years" [@levine_divergent_2006, p. 124]
+  <!-- * $\implies \textsf{Shared-Intellectual-Community}(\entity{F.W.J. Schelling},\text{ }\entity{G.W.F. Hegel})$ -->
+* **Shared Geography**: for example, ``Lenin was an occasional visitor in Vienna. Hitler, like Trotsky, had lived there for years." [@morton_thunder_1990, p. 290]
+  <!-- * $\implies \textsf{Shared-Geography}(\entity{V.I. Lenin},\text{ }\entity{Adolf Hitler})$ -->
+* **Rivalry**: for example, ``the cultural philosophy of the Historical School and, more particularly, of Hegel's rival at the University of Berlin, Friedrich Schleiermacher." [@toews_hegelianism_1985, p. 7]
+  <!-- * $\implies \textsf{Rivalry}(\entity{G.W.F. Hegel},\text{ }\entity{Friedrich Schleiermacher})$ -->
+
+:::
+:::
 
 ## The Point is To Change It
 
-* Theoretical Innovation -(?)-> Political Practice
+* Theoretical Innovation $\overset{?}{\longleftrightarrow}$ Political Practice
 
 ## Thank You!
 
 * Questions?
+
+## References

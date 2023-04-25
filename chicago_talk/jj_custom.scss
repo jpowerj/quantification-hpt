@@ -9,6 +9,12 @@ $presentation-h2-font-size: 1.5em;
   margin-left: auto;
   margin-right: 0;
   float: right;
+  padding-bottom: 2px!important;
+  margin-bottom: 2px!important;
+}
+
+.bigish {
+  font-size: 110%!important;
 }
 
 .bigger {
@@ -21,6 +27,10 @@ $presentation-h2-font-size: 1.5em;
 
 .biggerest {
   font-size: 180%!important;
+}
+
+.callout {
+  margin-bottom: 0.9em!important;
 }
 
 .smallmath .math.inline {
@@ -39,4 +49,26 @@ $presentation-h2-font-size: 1.5em;
 
 .tinytext {
   font-size: 66%!important;
+}
+
+.callout-content p:first-child {
+  margin-bottom: 0!important;
+}
+
+ul {
+  margin-bottom: 0.4em!important;
+}
+
+center p {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+
+center img {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+
+section h2 {
+  margin-bottom: 0!important;
 }

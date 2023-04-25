@@ -6,3 +6,4 @@
 *.gz
 *.tar.gz
 *.tgz
+**/*.tgz
