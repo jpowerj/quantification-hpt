@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 
+nyt_corpus/
 *.gz
 *.tar.gz
 *.tgz
