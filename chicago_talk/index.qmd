@@ -6,7 +6,6 @@ format:
   revealjs:
     theme: [default, jj_custom.scss]
     scrollable: true
-    embed-resources: true
 jupyter: python3
 editor:
   render-on-save: true
