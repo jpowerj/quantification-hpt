@@ -1,0 +1,4 @@
+Arts,Real Estate,Sports,U.S. News,World News,Total
+Correct,3020,690,4860,1330,1730,11630
+Incorrect,750,60,370,1100,590,2870
+Accuracy,0.801,0.920,0.929,0.547,0.746,0.802

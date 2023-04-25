@@ -1,0 +1,42 @@
+/*-- scss:defaults --*/
+
+$body-bg: #ffffff;
+$presentation-h2-font-size: 1.5em;
+
+/*-- scss:rules --*/
+
+.align-right {
+  margin-left: auto;
+  margin-right: 0;
+  float: right;
+}
+
+.bigger {
+  font-size: 120%!important;
+}
+
+.biggerer {
+  font-size: 150%!important;
+}
+
+.biggerest {
+  font-size: 180%!important;
+}
+
+.smallmath .math.inline {
+  font-size: 90%!important;
+}
+
+.smallmath .MathJax, .smallmath .MathJax_Display  {
+    font-size: 80%!important;
+}
+
+.redbox {
+  border: 2px solid red!important;
+  padding: 3px!important;
+  background-color: rgba(255,0,0,0.1)!important;
+}
+
+.tinytext {
+  font-size: 66%!important;
+}
