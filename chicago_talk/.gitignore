@@ -8,3 +8,5 @@ nyt_corpus/
 *.tar.gz
 *.tgz
 **/*.tgz
+
+/.quarto/
