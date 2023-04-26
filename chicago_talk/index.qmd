@@ -385,7 +385,27 @@ $$
 
 ## Fi Hadal Habs: Anonymous Communiqués of the First Intifada
 
-* First intifada
+<center>
+![](bayanat_topics.svg)
+</center>
+
+## Relative Focus
+
+<center>
+![](topics_by_group.svg)
+</center>
+
+## Relative Focus: Zooming In
+
+<center>
+![](topics_by_group_sub.svg)
+</center>
+
+## Adapting Over Time?
+
+<center>
+![](islam_nationalism.svg)
+</center>
 
 ## Thank You!
 
