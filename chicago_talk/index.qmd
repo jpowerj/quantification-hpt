@@ -141,6 +141,42 @@ import numpy as np
 :::
 :::
 
+## The Importance of Context {.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+::: {.smaller}
+E. M. Forster, *A Passage to India*
+:::
+
+<center>
+![](forster.png)
+</center>
+
+
+"the convention of signing-off novels in this way was sometimes used to draw attention to the romantically nomadic life of the author." [@skinner_visions_2012, p. 123]
+
+:::
+::: {.column width="50%"}
+
+::: {.smaller}
+James Joyce, *Ulysses*
+:::
+
+<center>
+![](ulysses.png)
+</center>
+
+Weybridge, Surrey, UK: "The classic instance of a prosaic English suburb" [@skinner_visions_2012, p. 124]
+
+<center>
+![](weybridge.png)
+</center>
+
+:::
+:::
+
 ## {#section-2 style='display: flex !important; height: 100%; flex-direction: column;'}
 
 ::: {style='display: flex; flex-direction: column; align-items: center; justify-content: center;'}
@@ -182,7 +218,7 @@ import numpy as np
 :::
 
 ::: {.callout-note appearance="minimal"}
-[*The 1844 Marx was still operating within **the ideological field of Young Hegelianism.***]{.bigish}
+[*The 1844 Marx was still operating within **the ideological field of Young Hegelianism.***]{.bigish2}
 
 ::: {.align-right}
 [@lowy_theory_1973, p. 104]
@@ -199,21 +235,55 @@ import numpy as np
 
 ## Constructing Contextual Fields
 
-* Word2Vec
-* BERT
+* Word2Vec vs. `BERT`
 
-
+<center>
+![](bert-nobert_standalone.svg){.r-stretch}
+</center>
 
 <!-- 	\caption{A visualization of \BERT{}'s ability to model the different contexts (and thus, senses) in which words are used by different authors. In this case \texttt{interference} falls squarely within the negative liberty (liberty as non-interference) cluster, as a term central to distinguishing negative from other forms of liberty, whereas \texttt{absence} falls between two clusters as it can be employed in both republican (``absence of arbitrary power'') and negative-liberty (``absence of interference'') contexts.}
 	\label{fig:bert-author}
 \end{figure} -->
 
-## The Empirics of Influence: Historical Sketches
+## Semantic Leadership Networks {.smaller}
 
-* Structure vs. Agency
-* Case Studies
-  * Text-Mining Influence Claims
-  * History of Marxism
+$$
+\begin{align*}
+	\mathsf{Lead}_{a_1 \rightarrow a_2}(w) = \frac{\mathsf{sim}(\mathbf{pre}_w^{a_1}, \mathbf{post}_w^{a_2})}{\mathsf{sim}(\mathbf{pre}_w^{a_2}, \mathbf{post}_w^{a_2})}.
+\end{align*}
+$$
+
+<center>
+![](influence_one_way_standalone.svg){width="55%"}
+</center>
+
+::: {.aside}
+[@soni_abolitionist_2021]
+:::
+
+## {#section-3 style='display: flex !important; height: 100%; flex-direction: column;'}
+
+::: {style='display: flex; flex-direction: column; align-items: center; justify-content: center;'}
+<h1>Section 3: Case Studies</h1>
+:::
+
+## The Empirics of Influence
+
+::: columns
+::: {.column width="50%"}
+* How do ideas "move" from one mind to another?
+* How do they spread through populations?
+* How can we characterize the causal relationship between ideas and actions?
+* @sperber_explaining_1996: culture = chains of internal and external representations
+:::
+::: {.column width="50%"}
+
+<center>
+![](sperber.jpg){width="80%"}
+</center>
+
+:::
+:::
 
 ## Text-Mining Influence Claims {.smaller}
 
@@ -222,21 +292,21 @@ import numpy as np
 ::: columns
 ::: {.column width="50%"}
 
-* **Collaboration**: "Karl Marx and Friedrich Engels carried on one of the great intellectual collaborations in the history of scientific research." [@gandy_marx_1979, p. ii]
+* **Collaboration**: "[Karl Marx]{.entity} and [Friedrich Engels]{.entity} carried on one of the great intellectual collaborations in the history of scientific research." [@gandy_marx_1979, p. ii]
   <!-- * $\newcommand{\entity}[1]{\small \verb+#1+} \implies \textsf{Collaboration}(\entity{Karl Marx}, \text{ }\entity{Friedrich Engels})$ -->
-* **Mentorship**: for example, "the grandly-titled \textit{Tractatus Logico-Philosophicus} was begun in 1915 following Wittgenstein's tenure at Cambridge under [Bertrand] Russell's mentorship" [@wright_schoenberg_2006, p. 72]
+* **Mentorship**: "the grandly-titled *Tractatus Logico-Philosophicus* was begun in 1915 following [Wittgenstein]{.entity}'s tenure at Cambridge under [Bertrand] [Russell]{.entity}'s mentorship" [@wright_schoenberg_2006, p. 72]
   <!-- * $\implies \textsf{Mentorship}(\entity{Bertrand Russell},\text{ }\entity{Ludwig Wittgenstein})$ -->
-* **Reading**: for example, ``Not only had Marx read Hegel's \textit{Logic} in 1858, but we know that he studied it once again in 1860.'' [@dussel_unknown_2002, p. 195]
+* **Reading**: "Not only had [Marx]{.entity} read [Hegel]{.entity}'s *Logic* in 1858, but we know that he studied it once again in 1860." [@dussel_unknown_2002, p. 195]
   <!-- * $\implies \textsf{Reading}(\entity{Karl Marx},\text{ } \entity{G.W.F. Hegel})$ -->
 
 :::
 ::: {.column width="50%"}
 
-* **Shared Intellectual Community**: "Schelling and Hegel first met at the Tübingen Seminary in 1790, and the two young men shared a room there during their student years" [@levine_divergent_2006, p. 124]
+* **Shared Intellectual Community**: "[Schelling]{.entity} and [Hegel]{.entity} first met at the Tübingen Seminary in 1790, and the two young men shared a room there during their student years" [@levine_divergent_2006, p. 124]
   <!-- * $\implies \textsf{Shared-Intellectual-Community}(\entity{F.W.J. Schelling},\text{ }\entity{G.W.F. Hegel})$ -->
-* **Shared Geography**: for example, ``Lenin was an occasional visitor in Vienna. Hitler, like Trotsky, had lived there for years." [@morton_thunder_1990, p. 290]
+* **Shared Geography**: "[Lenin]{.entity} was an occasional visitor in Vienna. [Hitler]{.entity}, like [Trotsky]{.entity}, had lived there for years." [@morton_thunder_1990, p. 290]
   <!-- * $\implies \textsf{Shared-Geography}(\entity{V.I. Lenin},\text{ }\entity{Adolf Hitler})$ -->
-* **Rivalry**: for example, ``the cultural philosophy of the Historical School and, more particularly, of Hegel's rival at the University of Berlin, Friedrich Schleiermacher." [@toews_hegelianism_1985, p. 7]
+* **Rivalry**: "the cultural philosophy of the Historical School and, more particularly, of [Hegel]{.entity}'s rival at the University of Berlin, [Friedrich Schleiermacher]{.entity}." [@toews_hegelianism_1985, p. 7]
   <!-- * $\implies \textsf{Rivalry}(\entity{G.W.F. Hegel},\text{ }\entity{Friedrich Schleiermacher})$ -->
 
 :::
@@ -245,6 +315,77 @@ import numpy as np
 ## The Point is To Change It
 
 * Theoretical Innovation $\overset{?}{\longleftrightarrow}$ Political Practice
+
+::: columns
+::: {.column width="50%"}
+
+<center style='width: 100%!important;'>
+![](marxism_after_marx.png){width="150%"}
+</center>
+
+:::
+::: {.column width="50%"}
+
+<center>
+![](marxism_after_marx2.png){width="100%"}
+</center>
+
+:::
+:::
+
+::: {.aside}
+[@mclellan_marxism_2007]
+:::
+
+## Modeling Texts and Events
+
+<center>
+![](influence_model.svg){width="80%"}
+</center>
+
+## Innovation and Influence in Twentieth Century Marxism
+
+::: columns
+::: {.column width="50%"}
+
+<center>
+![](marxism_novelty_resonance.svg){width="100%"}
+</center>
+
+:::
+::: {.column width="50%"}
+
+<center>
+![](marxism_transience_novelty.svg){width="70%"}
+</center>
+
+:::
+:::
+
+## Semantic Leadership in Nineteenth Century Socialist Thought
+
+::: columns
+::: {.column width="40%"}
+
+* ~250 texts, 9K newspaper articles
+
+<center>
+![](sln_pgm.svg){width="100%" style='padding-top: 10px!important;'}
+</center>
+
+:::
+::: {.column width="60%"}
+
+<center>
+![](sln_1848.svg){width="100%"}
+</center>
+
+:::
+:::
+
+## Fi Hadal Habs: Anonymous Communiqués of the First Intifada
+
+* First intifada
 
 ## Thank You!
 

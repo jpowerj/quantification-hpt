@@ -531,6 +531,31 @@ Section 1: Background
 </div>
 </div>
 </section>
+<section id="the-importance-of-context" class="slide level2 smaller">
+<h2>The Importance of Context</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="smaller">
+<p>E. M. Forster, <em>A Passage to India</em></p>
+</div>
+<center>
+<img data-src="forster.png">
+</center>
+<p>“the convention of signing-off novels in this way was sometimes used to draw attention to the romantically nomadic life of the author.” <span class="citation" data-cites="skinner_visions_2012">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 2012, 123</a>)</span></p>
+</div><div class="column" style="width:50%;">
+<div class="smaller">
+<p>James Joyce, <em>Ulysses</em></p>
+</div>
+<center>
+<img data-src="ulysses.png">
+</center>
+<p>Weybridge, Surrey, UK: “The classic instance of a prosaic English suburb” <span class="citation" data-cites="skinner_visions_2012">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 2012, 124</a>)</span></p>
+<center>
+<img data-src="weybridge.png">
+</center>
+</div>
+</div>
+</section>
 <section id="section-2" class="slide level2" style="display: flex !important; height: 100%; flex-direction: column;">
 <h2></h2>
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -581,7 +606,7 @@ Section 2: Models of Meaning and Context
 <div class="callout callout-note no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
-<p><span class="bigish"><em>The 1844 Marx was still operating within <strong>the ideological field of Young Hegelianism.</strong></em></span></p>
+<p><span class="bigish2"><em>The 1844 Marx was still operating within <strong>the ideological field of Young Hegelianism.</strong></em></span></p>
 <div class="align-right">
 <p><span class="citation" data-cites="lowy_theory_1973">(<a href="#/references" role="doc-biblioref" onclick="">Löwy 1973, 104</a>)</span></p>
 </div>
@@ -602,23 +627,53 @@ Section 2: Models of Meaning and Context
 <section id="constructing-contextual-fields" class="slide level2">
 <h2>Constructing Contextual Fields</h2>
 <ul>
-<li>Word2Vec</li>
-<li>BERT</li>
+<li>Word2Vec vs.&nbsp;<code>BERT</code></li>
 </ul>
+<center>
+<img data-src="bert-nobert_standalone.svg" class="r-stretch">
+</center>
 <!--    \caption{A visualization of \BERT{}'s ability to model the different contexts (and thus, senses) in which words are used by different authors. In this case \texttt{interference} falls squarely within the negative liberty (liberty as non-interference) cluster, as a term central to distinguishing negative from other forms of liberty, whereas \texttt{absence} falls between two clusters as it can be employed in both republican (``absence of arbitrary power'') and negative-liberty (``absence of interference'') contexts.}
     \label{fig:bert-author}
 \end{figure} -->
 </section>
-<section id="the-empirics-of-influence-historical-sketches" class="slide level2">
-<h2>The Empirics of Influence: Historical Sketches</h2>
+<section id="semantic-leadership-networks" class="slide level2 smaller">
+<h2>Semantic Leadership Networks</h2>
+<p><span class="math display">\[
+\begin{align*}
+    \mathsf{Lead}_{a_1 \rightarrow a_2}(w) = \frac{\mathsf{sim}(\mathbf{pre}_w^{a_1}, \mathbf{post}_w^{a_2})}{\mathsf{sim}(\mathbf{pre}_w^{a_2}, \mathbf{post}_w^{a_2})}.
+\end{align*}
+\]</span></p>
+<center>
+<img data-src="influence_one_way_standalone.svg" style="width:55.0%">
+</center>
+
+<aside><div>
+<p><span class="citation" data-cites="soni_abolitionist_2021">(<a href="#/references" role="doc-biblioref" onclick="">Soni, Klein, and Eisenstein 2021</a>)</span></p>
+</div></aside></section>
+<section id="section-3" class="slide level2" style="display: flex !important; height: 100%; flex-direction: column;">
+<h2></h2>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+<h1>
+Section 3: Case Studies
+</h1>
+</div>
+</section>
+<section id="the-empirics-of-influence" class="slide level2">
+<h2>The Empirics of Influence</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>Structure vs.&nbsp;Agency</li>
-<li>Case Studies
-<ul>
-<li>Text-Mining Influence Claims</li>
-<li>History of Marxism</li>
-</ul></li>
+<li>How do ideas “move” from one mind to another?</li>
+<li>How do they spread through populations?</li>
+<li>How can we characterize the causal relationship between ideas and actions?</li>
+<li><span class="citation" data-cites="sperber_explaining_1996">Sperber (<a href="#/references" role="doc-biblioref" onclick="">1996</a>)</span>: culture = chains of internal and external representations</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<center>
+<img data-src="sperber.jpg" style="width:80.0%">
+</center>
+</div>
+</div>
 </section>
 <section id="text-mining-influence-claims" class="slide level2 smaller">
 <h2>Text-Mining Influence Claims</h2>
@@ -628,15 +683,15 @@ Section 2: Models of Meaning and Context
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><strong>Collaboration</strong>: “Karl Marx and Friedrich Engels carried on one of the great intellectual collaborations in the history of scientific research.” <span class="citation" data-cites="gandy_marx_1979">(<a href="#/references" role="doc-biblioref" onclick="">Gandy 1979, ii</a>)</span> <!-- * $\newcommand{\entity}[1]{\small \verb+#1+} \implies \textsf{Collaboration}(\entity{Karl Marx}, \text{ }\entity{Friedrich Engels})$ --></li>
-<li><strong>Mentorship</strong>: for example, “the grandly-titled was begun in 1915 following Wittgenstein’s tenure at Cambridge under [Bertrand] Russell’s mentorship” <span class="citation" data-cites="wright_schoenberg_2006">(<a href="#/references" role="doc-biblioref" onclick="">Wright 2006, 72</a>)</span> <!-- * $\implies \textsf{Mentorship}(\entity{Bertrand Russell},\text{ }\entity{Ludwig Wittgenstein})$ --></li>
-<li><strong>Reading</strong>: for example, ``Not only had Marx read Hegel’s in 1858, but we know that he studied it once again in 1860.’’ <span class="citation" data-cites="dussel_unknown_2002">(<a href="#/references" role="doc-biblioref" onclick="">Dussel 2002, 195</a>)</span> <!-- * $\implies \textsf{Reading}(\entity{Karl Marx},\text{ } \entity{G.W.F. Hegel})$ --></li>
+<li><strong>Collaboration</strong>: “<span class="entity">Karl Marx</span> and <span class="entity">Friedrich Engels</span> carried on one of the great intellectual collaborations in the history of scientific research.” <span class="citation" data-cites="gandy_marx_1979">(<a href="#/references" role="doc-biblioref" onclick="">Gandy 1979, ii</a>)</span> <!-- * $\newcommand{\entity}[1]{\small \verb+#1+} \implies \textsf{Collaboration}(\entity{Karl Marx}, \text{ }\entity{Friedrich Engels})$ --></li>
+<li><strong>Mentorship</strong>: “the grandly-titled <em>Tractatus Logico-Philosophicus</em> was begun in 1915 following <span class="entity">Wittgenstein</span>’s tenure at Cambridge under [Bertrand] <span class="entity">Russell</span>’s mentorship” <span class="citation" data-cites="wright_schoenberg_2006">(<a href="#/references" role="doc-biblioref" onclick="">Wright 2006, 72</a>)</span> <!-- * $\implies \textsf{Mentorship}(\entity{Bertrand Russell},\text{ }\entity{Ludwig Wittgenstein})$ --></li>
+<li><strong>Reading</strong>: “Not only had <span class="entity">Marx</span> read <span class="entity">Hegel</span>’s <em>Logic</em> in 1858, but we know that he studied it once again in 1860.” <span class="citation" data-cites="dussel_unknown_2002">(<a href="#/references" role="doc-biblioref" onclick="">Dussel 2002, 195</a>)</span> <!-- * $\implies \textsf{Reading}(\entity{Karl Marx},\text{ } \entity{G.W.F. Hegel})$ --></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <ul>
-<li><strong>Shared Intellectual Community</strong>: “Schelling and Hegel first met at the Tübingen Seminary in 1790, and the two young men shared a room there during their student years” <span class="citation" data-cites="levine_divergent_2006">(<a href="#/references" role="doc-biblioref" onclick="">Levine 2006, 124</a>)</span> <!-- * $\implies \textsf{Shared-Intellectual-Community}(\entity{F.W.J. Schelling},\text{ }\entity{G.W.F. Hegel})$ --></li>
-<li><strong>Shared Geography</strong>: for example, ``Lenin was an occasional visitor in Vienna. Hitler, like Trotsky, had lived there for years.” <span class="citation" data-cites="morton_thunder_1990">(<a href="#/references" role="doc-biblioref" onclick="">Morton 1990, 290</a>)</span> <!-- * $\implies \textsf{Shared-Geography}(\entity{V.I. Lenin},\text{ }\entity{Adolf Hitler})$ --></li>
-<li><strong>Rivalry</strong>: for example, ``the cultural philosophy of the Historical School and, more particularly, of Hegel’s rival at the University of Berlin, Friedrich Schleiermacher.” <span class="citation" data-cites="toews_hegelianism_1985">(<a href="#/references" role="doc-biblioref" onclick="">Toews 1985, 7</a>)</span> <!-- * $\implies \textsf{Rivalry}(\entity{G.W.F. Hegel},\text{ }\entity{Friedrich Schleiermacher})$ --></li>
+<li><strong>Shared Intellectual Community</strong>: “<span class="entity">Schelling</span> and <span class="entity">Hegel</span> first met at the Tübingen Seminary in 1790, and the two young men shared a room there during their student years” <span class="citation" data-cites="levine_divergent_2006">(<a href="#/references" role="doc-biblioref" onclick="">Levine 2006, 124</a>)</span> <!-- * $\implies \textsf{Shared-Intellectual-Community}(\entity{F.W.J. Schelling},\text{ }\entity{G.W.F. Hegel})$ --></li>
+<li><strong>Shared Geography</strong>: “<span class="entity">Lenin</span> was an occasional visitor in Vienna. <span class="entity">Hitler</span>, like <span class="entity">Trotsky</span>, had lived there for years.” <span class="citation" data-cites="morton_thunder_1990">(<a href="#/references" role="doc-biblioref" onclick="">Morton 1990, 290</a>)</span> <!-- * $\implies \textsf{Shared-Geography}(\entity{V.I. Lenin},\text{ }\entity{Adolf Hitler})$ --></li>
+<li><strong>Rivalry</strong>: “the cultural philosophy of the Historical School and, more particularly, of <span class="entity">Hegel</span>’s rival at the University of Berlin, <span class="entity">Friedrich Schleiermacher</span>.” <span class="citation" data-cites="toews_hegelianism_1985">(<a href="#/references" role="doc-biblioref" onclick="">Toews 1985, 7</a>)</span> <!-- * $\implies \textsf{Rivalry}(\entity{G.W.F. Hegel},\text{ }\entity{Friedrich Schleiermacher})$ --></li>
 </ul>
 </div>
 </div>
@@ -645,6 +700,63 @@ Section 2: Models of Meaning and Context
 <h2>The Point is To Change It</h2>
 <ul>
 <li>Theoretical Innovation <span class="math inline">\(\overset{?}{\longleftrightarrow}\)</span> Political Practice</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<center style="width: 100%!important;">
+<img data-src="marxism_after_marx.png" style="width:150.0%">
+</center>
+</div><div class="column" style="width:50%;">
+<center>
+<img data-src="marxism_after_marx2.png" style="width:100.0%">
+</center>
+</div>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="mclellan_marxism_2007">(<a href="#/references" role="doc-biblioref" onclick="">McLellan 2007</a>)</span></p>
+</div></aside></section>
+<section id="modeling-texts-and-events" class="slide level2">
+<h2>Modeling Texts and Events</h2>
+<center>
+<img data-src="influence_model.svg" style="width:80.0%">
+</center>
+</section>
+<section id="innovation-and-influence-in-twentieth-century-marxism" class="slide level2">
+<h2>Innovation and Influence in Twentieth Century Marxism</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<center>
+<img data-src="marxism_novelty_resonance.svg" style="width:100.0%">
+</center>
+</div><div class="column" style="width:50%;">
+<center>
+<img data-src="marxism_transience_novelty.svg" style="width:70.0%">
+</center>
+</div>
+</div>
+</section>
+<section id="semantic-leadership-in-nineteenth-century-socialist-thought" class="slide level2">
+<h2>Semantic Leadership in Nineteenth Century Socialist Thought</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>~250 texts, 9K newspaper articles</li>
+</ul>
+<center>
+<img data-src="sln_pgm.svg" style="padding-top: 10px!important;;width:100.0%">
+</center>
+</div><div class="column" style="width:60%;">
+<center>
+<img data-src="sln_1848.svg" style="width:100.0%">
+</center>
+</div>
+</div>
+</section>
+<section id="fi-hadal-habs-anonymous-communiqués-of-the-first-intifada" class="slide level2">
+<h2>Fi Hadal Habs: Anonymous Communiqués of the First Intifada</h2>
+<ul>
+<li>First intifada</li>
 </ul>
 </section>
 <section id="thank-you" class="slide level2">
@@ -677,11 +789,23 @@ Levine, Norman. 2006. <em>Divergent <span>Paths</span>: <span>The Hegelian</span
 <div id="ref-lowy_theory_1973" class="csl-entry" role="listitem">
 Löwy, Michael. 1973. <em>The <span>Theory</span> of <span>Revolution</span> in the <span>Young Marx</span></em>. <span>London</span>: <span>Brill</span>.
 </div>
+<div id="ref-mclellan_marxism_2007" class="csl-entry" role="listitem">
+McLellan, David. 2007. <em>Marxism <span>After Marx</span></em>. <span>New York</span>: <span>Palgrave Macmillan</span>.
+</div>
 <div id="ref-morton_thunder_1990" class="csl-entry" role="listitem">
 Morton, Frederic. 1990. <em>Thunder at <span>Twilight</span>: <span>Vienna</span> 1913/1914</em>. <span>Collier Books</span>.
 </div>
 <div id="ref-skinner_hobbes_2008" class="csl-entry" role="listitem">
 Skinner, Quentin. 2008. <em>Hobbes and <span>Republican Liberty</span></em>. <span>Cambridge University Press</span>.
+</div>
+<div id="ref-skinner_visions_2012" class="csl-entry" role="listitem">
+———. 2012. <em>Visions of <span>Politics</span>, <span>Volume</span> 1: <span>Regarding Method</span></em>. <span>Cambridge</span>: <span>Cambridge University Press</span>.
+</div>
+<div id="ref-soni_abolitionist_2021" class="csl-entry" role="listitem">
+Soni, Sandeep, Lauren F. Klein, and Jacob Eisenstein. 2021. <span>“Abolitionist <span>Networks</span>: <span>Modeling Language Change</span> in <span>Nineteenth-Century Activist Newspapers</span>.”</span> <em>Journal of Cultural Analytics</em> 6 (1): 18841. <a href="https://doi.org/10.22148/001c.18841">https://doi.org/10.22148/001c.18841</a>.
+</div>
+<div id="ref-sperber_explaining_1996" class="csl-entry" role="listitem">
+Sperber, Dan. 1996. <em>Explaining <span>Culture</span>: <span>A Naturalistic Approach</span></em>. <span>Cambridge</span>: <span>Blackwell</span>.
 </div>
 <div id="ref-tilly_contentious_2008" class="csl-entry" role="listitem">
 Tilly, Charles. 2008. <em>Contentious <span>Performances</span></em>. <span>New York</span>: <span>Cambridge University Press</span>.

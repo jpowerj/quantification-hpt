@@ -1,0 +1,66 @@
+\documentclass[crop,tikz,multi=false]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{bayesnet}
+\usepackage{tikzscale}
+\usepackage{tkz-euclide}
+\usepackage{tcolorbox}
+\usepackage{svg}
+\tcbuselibrary{skins,breakable}
+% pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+% For entities in text
+\newcommand{\entity}[1]{\texttt{#1}}
+% For entities in pgfplots
+\newcommand{\entpgf}[1]{\texttt{#1}}
+
+\begin{document}
+	\begin{tikzpicture}[scale=1.5]
+		\begin{axis}[axis lines=center,
+			%view={28}{22},
+			xmin=0, xmax=1, ymin=0, ymax=1,
+			%xtick={0,1},ytick={0,1.0},
+			xlabel=$x$,ylabel=$y$,width=10cm,height=10cm]
+			\addplot+[only marks,point meta=explicit symbolic, nodes near coords,mark options={fill=black,color=black}] coordinates 
+			{
+				% top left: withdrawal_drugs
+				(0.2,0.79)[{\includesvg[width=5.5mm,height=5.5mm]{../figs/1F489.svg}}]
+				(0.2,0.9)[$\textsf{withdrawal}_2$]
+				(0.1,0.72)[$\textsf{addiction}$]
+				(0.3,0.715)[$\textsf{drugs}$]
+				% bottom left: bank_money
+				(0.2,0.19)[{\includesvg[width=5.5mm,height=5.5mm]{../figs/1F4B0.svg}}]
+				(0.2,0.3)[$\textsf{bank}_1$]
+				(0.085,0.2)[$\textsf{money}$]
+				(0.3,0.2)[$\textsf{teller}$]
+				(0.2,0.1)[$\textsf{withdrawal}_1$]
+				% top right: bank_water
+				% waves
+				%(0.8,0.8)[{\includesvg[width=5.5mm]{./ch0/figs/1F30A.svg}}]
+				% droplet
+				(0.8,0.79)[{\includesvg[width=5.5mm,height=5.5mm]{../figs/1F4A7.svg}}]
+				(0.69,0.8)[$\textsf{bank}_2$]
+				(0.8,0.9)[$\textsf{river}$]
+				(0.8,0.71)[$\textsf{swim}$]
+				(0.925,0.8)[$\textsf{stream}_1$]
+				% bottom right: stream_music
+				% 3 notes
+				%(0.8,0.19)[{\includesvg[width=5.5mm,height=5.5mm]{./ch0/figs/1F3B6.svg}}]
+				% 1 note
+				(0.8,0.19)[{\includesvg[width=5.5mm,height=5.5mm]{../figs/1F3B5.svg}}]
+				(0.8,0.3)[$\textsf{stream}_2$]
+				(0.7,0.12)[$\textsf{revenue}$]
+				(0.9,0.12)[$\textsf{music}$]
+			};
+			%\addplot+ graphics[xmin=0,xmax=96,ymin=0,ymax=96] {Dad64.png};
+		\end{axis}
+	\end{tikzpicture}
+\end{document}
+

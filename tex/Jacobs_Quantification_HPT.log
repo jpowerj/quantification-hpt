@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.24)  24 APR 2023 22:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.24)  25 APR 2023 18:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2599,7 +2599,7 @@ Package logreq Info: Writing requests to 'Jacobs_Quantification_HPT.run.xml'.
 Here is how much of TeX's memory you used:
  55902 strings out of 476331
  1325389 string characters out of 5787765
- 2183791 words of memory out of 5000000
+ 2183742 words of memory out of 5000000
  74848 multiletter control sequences out of 15000+600000
  668457 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2642,7 +2642,7 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/jpjac/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/User
 s/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb><C:/
 Users/jpjac/AppData/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect9.pfb>
-Output written on Jacobs_Quantification_HPT.pdf (104 pages, 2743067 bytes).
+Output written on Jacobs_Quantification_HPT.pdf (104 pages, 2742815 bytes).
 PDF statistics:
  2832 PDF objects out of 2984 (max. 8388607)
  385 named destinations out of 1000 (max. 500000)

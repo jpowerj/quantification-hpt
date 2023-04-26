@@ -1,5 +1,27 @@
-\begin{figure}[ht!]
-	\centering
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{bayesnet}
+\usepackage{tikzscale}
+\usepackage{tkz-euclide}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+% pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+% For entities in text
+\newcommand{\entity}[1]{\texttt{#1}}
+% For entities in pgfplots
+\newcommand{\entpgf}[1]{\texttt{#1}}
+
+\begin{document}
 	\begin{tikzpicture} %
 		% Center
 		\node[draw, rounded corners] (News) {Socialist Newspapers} ;
@@ -29,6 +51,4 @@
 		\edge [<->] {Proudhon} {EuroSoc} ;
 		\edge [<->] {News} {EuroSoc} ;
 	\end{tikzpicture}
-	\caption{A PGM of the potential avenues of influence among 19th century socialists.}
-	\label{fig:sln1}
-\end{figure}
+\end{document}
