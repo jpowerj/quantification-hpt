@@ -366,6 +366,9 @@ Jeff Jacobs
 Section 1: Background
 </h1>
 </div>
+<ul>
+<li>From word counts to contextual embeddings: the importance of this development for contextual history</li>
+</ul>
 </section>
 <section id="word-counts-good-enough" class="slide level2 smaller">
 <h2>Word Counts: Good Enough?</h2>
@@ -563,7 +566,137 @@ Section 1: Background
 Section 2: Models of Meaning and Context
 </h1>
 </div>
+<ul>
+<li>How can we adapt tools from <em>computer science</em> to allow <em>social scientists</em> and <em>humanists</em> to make meaningful inferences?</li>
+</ul>
+<!-- "However, the knowledge transfer from computer science and related fields has created confusion in how text as data models are applied, how they are validated, and how their output is interpreted. This confusion emerges because tasks in academic computer science are different than the tasks in social science, the digital humanities, and even parts of industry. While computer scientists are often (but not exclusively!) interested in information retrieval, recommendation systems, and benchmark linguistic tasks, a different community is interested in using “text as data” to learn about previously studied phenomena such as in social science, literature, and history. Despite these differences of purpose, text as data practitioners have tended to reflexively adopt the guidance from the computer science literature when doing their own work. This blind importing of the default methods and practices used to select, evaluate, and validate models from the computer science literature can lead to unintended consequences." -->
 </section>
+<section id="computer-science-algorithms-as-social-science-tools" class="slide level2">
+<h2>Computer Science Algorithms as Social Science Tools</h2>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><span class="bigger"><em>blind importing of <strong>the default methods and practices used to select, evaluate, and validate models from the computer science literature</strong> can lead to unintended consequences.</em></span></p>
+<div class="align-right">
+<p><span class="citation" data-cites="grimmer_text_2022">(<a href="#/references" role="doc-biblioref" onclick="">Grimmer, Roberts, and Stewart 2022</a>)</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="engineering-vs.-social-science" class="slide level2 smaller">
+<h2>Engineering vs.&nbsp;Social Science</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>What I learned in engineering school:
+<ul>
+<li>Step 1: Make a table of <span class="math inline">\(F\)</span>-scores, where your algorithm is highest</li>
+<li>Step 2: Profit ($$$)</li>
+</ul></li>
+</ul>
+<center>
+<img data-src="bert_table.png">
+</center>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Showing up in social science program:
+<ul>
+<li>Where are your standard errors?</li>
+<li>Have you controlled for confounders?</li>
+<li>Alternative specification? Robustness?</li>
+</ul></li>
+</ul>
+<center>
+<img data-src="adam_table.png">
+</center>
+</div>
+</div>
+</section>
+<section id="natural-language-processing" class="slide level2 smaller">
+<h2>Natural Language Processing</h2>
+<ul>
+<li>The goal for most algorithms: predict the next word in this sentence</li>
+<li>“Porting” to social science requires modification + validation</li>
+<li>What exactly do you mean when you say <strong>“context”</strong>?</li>
+<li>Wikipedia corpus, most similar to “Turing”:</li>
+</ul>
+
+<table>
+<tbody><tr>
+<th>
+</th>
+<th class="bb">
+Dependency Tree
+</th>
+<th>
+5-Word Window
+</th>
+<th>
+</th>
+</tr>
+<tr>
+<td class="bb tb">
+Co-Hyponyms (Paradigmatic) <span class="math inline">\(\rightarrow\)</span>
+</td>
+<td class="ln tb bn">
+Pauling
+</td>
+<td class="rn bn lb">
+nondeterministic
+</td>
+<td class="bb">
+<span class="math inline">\(\leftarrow\)</span> Topically Related (Syntagmatic)
+</td>
+</tr>
+<tr>
+<td class="bn">
+</td>
+<td class="lb bn">
+Hotelling
+</td>
+<td class="rb bn">
+computability
+</td>
+<td class="bn">
+</td>
+</tr>
+<tr>
+<td class="bn">
+</td>
+<td class="lb bn">
+Lessing
+</td>
+<td class="rb bn">
+deterministic
+</td>
+<td class="bn">
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td class="lb bb">
+Hamming
+</td>
+<td class="rb bb">
+finite-state
+</td>
+<td class="bn">
+</td>
+</tr>
+
+</tbody></table>
+<!-- | Dependency Tree | 5-Word Window |
+| ---- | --- |
+| Pauling   | nondeterministic |
+| Hotelling | computability |
+| Lessing   | deterministic |
+| Hamming   | finite-state | -->
+
+<aside><div>
+<p>Example adapted from <a href="https://w4nderlu.st/teaching/word-embeddings">https://w4nderlu.st/teaching/word-embeddings</a></p>
+</div></aside></section>
 <section id="raw-word-embeddings" class="slide level2 smaller">
 <h2>Raw Word Embeddings</h2>
 <ul>
@@ -591,12 +724,12 @@ Section 2: Models of Meaning and Context
 <img data-src="author_bert_standalone.svg" style="height:10.0%">
 </center>
 </section>
-<section id="the-geometry-of-political-thought" class="slide level2">
+<section id="the-geometry-of-political-thought" class="slide level2 smaller">
 <h2>The Geometry of Political Thought</h2>
 <div class="callout callout-note no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
-<p><span class="bigish"><em>Hobbes’s analysis of <strong>liberty</strong> in</em> Leviathan <em>represents not a revision but a <strong>repudiation</strong> of what he had earlier argued, […] a <strong>substantial change</strong> in the character of his moral thought.</em></span></p>
+<p><span class="biggerer"><em>Hobbes’s analysis of <strong>liberty</strong> in</em> Leviathan <em>represents not a revision but a <strong>repudiation</strong> of what he had earlier argued, […] a <strong>substantial change</strong> in the character of his moral thought.</em></span></p>
 <div class="align-right">
 <p><span class="citation" data-cites="skinner_hobbes_2008">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 2008, xvi</a>)</span></p>
 </div>
@@ -606,7 +739,7 @@ Section 2: Models of Meaning and Context
 <div class="callout callout-note no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
-<p><span class="bigish2"><em>The 1844 Marx was still operating within <strong>the ideological field of Young Hegelianism.</strong></em></span></p>
+<p><span class="biggerer"><em>The 1844 Marx was still operating within <strong>the ideological field of Young Hegelianism.</strong></em></span></p>
 <div class="align-right">
 <p><span class="citation" data-cites="lowy_theory_1973">(<a href="#/references" role="doc-biblioref" onclick="">Löwy 1973, 104</a>)</span></p>
 </div>
@@ -616,7 +749,7 @@ Section 2: Models of Meaning and Context
 <div class="callout callout-note no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
-<p><span class="bigish"><em>[Khomeini] now <strong>used [mostazafin] to mean</strong> the angry ‘oppressed masses’, a meaning it had <strong>acquired in the early 1960s</strong> when [Ali] Shariati and his disciples translated Franz Fanon’s</em> The Wretched of the Earth <em>as</em> Mostazafin-e Zamin.</span></p>
+<p><span class="biggerer"><em>[Khomeini] now <strong>used [mostazafin] to mean</strong> the angry ‘oppressed masses’, a meaning it had <strong>acquired in the early 1960s</strong> when [Ali] Shariati and his disciples translated Franz Fanon’s</em> The Wretched of the Earth <em>as</em> Mostazafin-e Zamin.</span></p>
 <div class="align-right">
 <p><span class="citation" data-cites="abrahamian_khomeinism_1993">(<a href="#/references" role="doc-biblioref" onclick="">Abrahamian 1993, 47</a>)</span></p>
 </div>
@@ -650,13 +783,20 @@ Section 2: Models of Meaning and Context
 <aside><div>
 <p><span class="citation" data-cites="soni_abolitionist_2021">(<a href="#/references" role="doc-biblioref" onclick="">Soni, Klein, and Eisenstein 2021</a>)</span></p>
 </div></aside></section>
-<section id="section-3" class="slide level2" style="display: flex !important; height: 100%; flex-direction: column;">
+<section id="section-3" class="slide level2 smaller" style="display: flex !important; height: 100%; flex-direction: column;">
 <h2></h2>
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
 <h1>
 Section 3: Case Studies
 </h1>
 </div>
+<ul>
+<li>Bringing empirics into political-theoretic disputes, by way of computational tools</li>
+<li><a href="https://textlab.app/hegel" target="_blank">textlab.app/hegel</a></li>
+</ul>
+<center>
+<img data-src="hegel.png" style="width:80.0%">
+</center>
 </section>
 <section id="the-empirics-of-influence" class="slide level2">
 <h2>The Empirics of Influence</h2>
@@ -674,6 +814,14 @@ Section 3: Case Studies
 </center>
 </div>
 </div>
+</section>
+<section id="step-1" class="slide level2">
+<h2>Step 1</h2>
+<ul>
+<li>How have political theorists conceptualized “influence” thus far?</li>
+<li>What counts as acceptable evidence for influence?</li>
+<li>Which instances of hypothesized influence are widely accepted among political theorists? Which ones are widely rejected? Which ones were obvious, and which ones were only accepted after long debate?</li>
+</ul>
 </section>
 <section id="text-mining-influence-claims" class="slide level2 smaller">
 <h2>Text-Mining Influence Claims</h2>
@@ -758,17 +906,20 @@ Section 3: Case Studies
 <center>
 <img data-src="bayanat_topics.svg">
 </center>
-</section>
+
+<aside><div>
+<p>Small data! <span class="math inline">\(N = 54\)</span></p>
+</div></aside></section>
 <section id="relative-focus" class="slide level2">
 <h2>Relative Focus</h2>
 <center>
-<img data-src="topics_by_group.svg">
+<img data-src="topics_by_group.svg" style="width:90.0%">
 </center>
 </section>
 <section id="relative-focus-zooming-in" class="slide level2">
 <h2>Relative Focus: Zooming In</h2>
 <center>
-<img data-src="topics_by_group_sub.svg">
+<img data-src="topics_by_group_sub.svg" style="width:90.0%">
 </center>
 </section>
 <section id="adapting-over-time" class="slide level2">
@@ -800,6 +951,9 @@ Firth, John Rupert. 1957. <em>Papers in <span>Linguistics</span>, 1934-1951</em>
 </div>
 <div id="ref-gandy_marx_1979" class="csl-entry" role="listitem">
 Gandy, D. Ross. 1979. <em>Marx and <span>History</span>: <span>From Primitive Society</span> to the <span>Communist Future</span></em>. <span>University of Texas Press</span>.
+</div>
+<div id="ref-grimmer_text_2022" class="csl-entry" role="listitem">
+Grimmer, Justin, Margaret E. Roberts, and Brandon M. Stewart. 2022. <em>Text as <span>Data</span>: <span>A New Framework</span> for <span>Machine Learning</span> and the <span>Social Sciences</span></em>. <span>Princeton University Press</span>.
 </div>
 <div id="ref-levine_divergent_2006" class="csl-entry" role="listitem">
 Levine, Norman. 2006. <em>Divergent <span>Paths</span>: <span>The Hegelian</span> Foundations of <span>Marx</span>’s Method</em>. <span>Lanham, MD</span>: <span>Lexington Books</span>.

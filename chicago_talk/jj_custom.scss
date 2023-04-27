@@ -41,6 +41,31 @@ $presentation-h2-font-size: 1.5em;
   color: blue!important;
 }
 
+.lb {
+  border-left: 1px solid black !important;
+}
+
+.ln {
+  border-left: 0 !important;
+}
+
+.bn {
+  border-bottom: 0 !important;
+}
+
+.bb {
+  border-bottom: 1px solid black !important;
+}
+
+.rb {
+  border-left: 1px solid black !important;
+  border-right: 1px solid black !important;
+}
+
+.tb {
+  border-top: 1px solid black !important;
+}
+
 .moresmall {
   font-size: 80%!important;
 }

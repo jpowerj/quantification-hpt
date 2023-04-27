@@ -24,6 +24,8 @@ import numpy as np
 <h1>Section 1: Background</h1>
 :::
 
+* From word counts to contextual embeddings: the importance of this development for contextual history
+
 ## Word Counts: Good Enough? {.smaller}
 
 * 4 keywords per section:
@@ -183,6 +185,95 @@ Weybridge, Surrey, UK: "The classic instance of a prosaic English suburb" [@skin
 <h1>Section 2: Models of Meaning and Context</h1>
 :::
 
+* How can we adapt tools from *computer science* to allow *social scientists* and *humanists* to make meaningful inferences?
+
+<!-- "However, the knowledge transfer from computer science and related fields has created confusion in how text as data models are applied, how they are validated, and how their output is interpreted. This confusion emerges because tasks in academic computer science are different than the tasks in social science, the digital humanities, and even parts of industry. While computer scientists are often (but not exclusively!) interested in information retrieval, recommendation systems, and benchmark linguistic tasks, a different community is interested in using “text as data” to learn about previously studied phenomena such as in social science, literature, and history. Despite these differences of purpose, text as data practitioners have tended to reflexively adopt the guidance from the computer science literature when doing their own work. This blind importing of the default methods and practices used to select, evaluate, and validate models from the computer science literature can lead to unintended consequences." -->
+
+## Computer Science Algorithms as Social Science Tools
+
+::: {.callout-note appearance="minimal"}
+[*blind importing of **the default methods and practices used to select, evaluate, and validate models from the computer science literature** can lead to unintended consequences.*]{.bigger}
+
+::: {.align-right}
+[@grimmer_text_2022]
+:::
+:::
+
+## Engineering vs. Social Science {.smaller}
+
+::: columns
+::: {.column width="50%"}
+* What I learned in engineering school:
+  * Step 1: Make a table of $F$-scores, where your algorithm is highest
+  * Step 2: Profit ($$$)
+
+<center>
+![](bert_table.png)
+</center>
+:::
+::: {.column width="50%"}
+* Showing up in social science program:
+  * Where are your standard errors?
+  * Have you controlled for confounders?
+  * Alternative specification? Robustness?
+
+<center>
+![](adam_table.png)
+</center>
+:::
+:::
+
+## Natural Language Processing {.smaller}
+
+* The goal for most algorithms: predict the next word in this sentence
+* "Porting" to social science requires modification + validation
+* What exactly do you mean when you say **"context"**?
+* Wikipedia corpus, most similar to "Turing":
+
+<table>
+<tr>
+<th></th>
+<th class="bb">Dependency Tree</th>
+<th>5-Word Window</th>
+<th></th>
+</tr>
+<tr>
+<td class="bb tb">Co-Hyponyms (Paradigmatic) $\rightarrow$</td>
+<td class="ln tb bn">Pauling</td>
+<td class="rn bn lb">nondeterministic</td>
+<td class="bb">$\leftarrow$ Topically Related (Syntagmatic)</td>
+</tr>
+<tr>
+<td class="bn"></td>
+<td class="lb bn">Hotelling</td>
+<td class="rb bn">computability</td>
+<td class="bn"></td>
+</tr>
+<tr>
+<td class="bn"></td>
+<td class="lb bn">Lessing</td>
+<td class="rb bn">deterministic</td>
+<td class="bn"></td>
+</tr>
+<tr>
+<td></td>
+<td class="lb bb">Hamming</td>
+<td class="rb bb">finite-state</td>
+<td class="bn"></td>
+</tr>
+</table>
+
+<!-- | Dependency Tree | 5-Word Window |
+| ---- | --- |
+| Pauling   | nondeterministic |
+| Hotelling | computability |
+| Lessing   | deterministic |
+| Hamming   | finite-state | -->
+
+::: {.aside}
+Example adapted from [https://w4nderlu.st/teaching/word-embeddings](https://w4nderlu.st/teaching/word-embeddings)
+:::
+
 ## Raw Word Embeddings {.smaller}
 
 * What do they "mean"?
@@ -207,10 +298,10 @@ Weybridge, Surrey, UK: "The classic instance of a prosaic English suburb" [@skin
 ![](author_bert_standalone.svg){height="10%"}
 </center>
 
-## The Geometry of Political Thought
+## The Geometry of Political Thought {.smaller}
 
 ::: {.callout-note appearance="minimal"}
-[*Hobbes's analysis of **liberty** in* Leviathan *represents not a revision but a **repudiation** of what he had earlier argued, [...] a **substantial change** in the character of his moral thought.*]{.bigish}
+[*Hobbes's analysis of **liberty** in* Leviathan *represents not a revision but a **repudiation** of what he had earlier argued, [...] a **substantial change** in the character of his moral thought.*]{.biggerer}
 
 ::: {.align-right}
 [@skinner_hobbes_2008, p. xvi]
@@ -218,7 +309,7 @@ Weybridge, Surrey, UK: "The classic instance of a prosaic English suburb" [@skin
 :::
 
 ::: {.callout-note appearance="minimal"}
-[*The 1844 Marx was still operating within **the ideological field of Young Hegelianism.***]{.bigish2}
+[*The 1844 Marx was still operating within **the ideological field of Young Hegelianism.***]{.biggerer}
 
 ::: {.align-right}
 [@lowy_theory_1973, p. 104]
@@ -226,7 +317,7 @@ Weybridge, Surrey, UK: "The classic instance of a prosaic English suburb" [@skin
 :::
 
 ::: {.callout-note appearance="minimal"}
-[*[Khomeini] now **used [mostazafin] to mean** the angry 'oppressed masses', a meaning it had **acquired in the early 1960s** when [Ali] Shariati and his disciples translated Franz Fanon's* The Wretched of the Earth *as* Mostazafin-e Zamin.]{.bigish}
+[*[Khomeini] now **used [mostazafin] to mean** the angry 'oppressed masses', a meaning it had **acquired in the early 1960s** when [Ali] Shariati and his disciples translated Franz Fanon's* The Wretched of the Earth *as* Mostazafin-e Zamin.]{.biggerer}
 
 ::: {.align-right}
 [@abrahamian_khomeinism_1993, p. 47]
@@ -261,11 +352,18 @@ $$
 [@soni_abolitionist_2021]
 :::
 
-## {#section-3 style='display: flex !important; height: 100%; flex-direction: column;'}
+## {#section-3 .smaller style='display: flex !important; height: 100%; flex-direction: column;'}
 
 ::: {style='display: flex; flex-direction: column; align-items: center; justify-content: center;'}
 <h1>Section 3: Case Studies</h1>
 :::
+
+* Bringing empirics into political-theoretic disputes, by way of computational tools
+* [textlab.app/hegel](https://textlab.app/hegel){target="_blank"}
+
+<center>
+![](hegel.png){width="80%"}
+</center>
 
 ## The Empirics of Influence
 
@@ -284,6 +382,12 @@ $$
 
 :::
 :::
+
+## Step 1
+
+* How have political theorists conceptualized "influence" thus far?
+* What counts as acceptable evidence for influence?
+* Which instances of hypothesized influence are widely accepted among political theorists? Which ones are widely rejected? Which ones were obvious, and which ones were only accepted after long debate?
 
 ## Text-Mining Influence Claims {.smaller}
 
@@ -389,16 +493,20 @@ $$
 ![](bayanat_topics.svg)
 </center>
 
+::: {.aside}
+Small data! $N = 54$
+:::
+
 ## Relative Focus
 
 <center>
-![](topics_by_group.svg)
+![](topics_by_group.svg){width="90%"}
 </center>
 
 ## Relative Focus: Zooming In
 
 <center>
-![](topics_by_group_sub.svg)
+![](topics_by_group_sub.svg){width="90%"}
 </center>
 
 ## Adapting Over Time?
