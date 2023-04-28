@@ -46,9 +46,7 @@ import numpy as np
 | Incorrect | 750 | 60 | 370 | 1100 | 590 | **2870** |
 | Accuracy | **0.801** | **0.920** | **0.929** | <span class="redbox">**0.547**</span> | <span class="redbox">**0.746**</span> | **0.802** |
 
-## What's Missing?
-
-...Context!
+## What's Missing? (Context!)
 
 ::: {.callout-note appearance="minimal"}
 [*You shall know a word by the company it keeps.*]{.biggerest}
@@ -92,7 +90,7 @@ import numpy as np
 ::: {.column width="51%"}
 
 * What are political actors *doing* with words?
-  * "condemning, opposing, resisting, demanding, beseeching, supporting, rewarding [...] attacking, expelling, cursing, cheering, singing" [@tilly_contentious_2008] 
+  * "telling someone? [...] reminding them, or warning them, or reassuring them? [...] explaining something, apologising, or criticising [...] lamenting [...] Perhaps he meant nothing at all."
 
 <!-- > "a battle, a struggle, a place and an instrument of confrontation, a weapon of power, of control, of subjection, of qualification and of disqualification." Foucault -->
 
@@ -156,7 +154,6 @@ E. M. Forster, *A Passage to India*
 ![](forster.png)
 </center>
 
-
 "the convention of signing-off novels in this way was sometimes used to draw attention to the romantically nomadic life of the author." [@skinner_visions_2012, p. 123]
 
 :::
@@ -185,7 +182,7 @@ Weybridge, Surrey, UK: "The classic instance of a prosaic English suburb" [@skin
 <h1>Section 2: Models of Meaning and Context</h1>
 :::
 
-* How can we adapt tools from *computer science* to allow *social scientists* and *humanists* to make meaningful inferences?
+* How can we adapt tools from *computer science* to allow *social scientists* and *humanists* to make meaningful (context-sensitve!) inferences?
 
 <!-- "However, the knowledge transfer from computer science and related fields has created confusion in how text as data models are applied, how they are validated, and how their output is interpreted. This confusion emerges because tasks in academic computer science are different than the tasks in social science, the digital humanities, and even parts of industry. While computer scientists are often (but not exclusively!) interested in information retrieval, recommendation systems, and benchmark linguistic tasks, a different community is interested in using “text as data” to learn about previously studied phenomena such as in social science, literature, and history. Despite these differences of purpose, text as data practitioners have tended to reflexively adopt the guidance from the computer science literature when doing their own work. This blind importing of the default methods and practices used to select, evaluate, and validate models from the computer science literature can lead to unintended consequences." -->
 
@@ -233,21 +230,21 @@ Weybridge, Surrey, UK: "The classic instance of a prosaic English suburb" [@skin
 <table>
 <tr>
 <th></th>
-<th class="bb">Dependency Tree</th>
+<th class="bb" width="25%">Dependency Tree</th>
 <th>5-Word Window</th>
 <th></th>
 </tr>
 <tr>
-<td class="bb tb">Co-Hyponyms (Paradigmatic) $\rightarrow$</td>
+<td class="bb tb">Co-Hyponyms $\rightarrow$</td>
 <td class="ln tb bn">Pauling</td>
 <td class="rn bn lb">nondeterministic</td>
-<td class="bb">$\leftarrow$ Topically Related (Syntagmatic)</td>
+<td class="bb">$\leftarrow$ Topically Related</td>
 </tr>
 <tr>
-<td class="bn"></td>
+<td class="bn">(Paradigmatic)^[Paradigmatic relationship $\approx$ substitutable, drawn from the same category of objects (BTS $\leftrightarrow$ BLACKPINK)]</td>
 <td class="lb bn">Hotelling</td>
 <td class="rb bn">computability</td>
-<td class="bn"></td>
+<td class="bn">(Syntagmatic)^[Syntagmatic relationships $\approx$ semantic relationships between words in a sentence (BTS $\leftrightarrow$ danced)]</td>
 </tr>
 <tr>
 <td class="bn"></td>
@@ -383,11 +380,11 @@ $$
 :::
 :::
 
-## Step 1
+## First Steps
 
 * How have political theorists conceptualized "influence" thus far?
-* What counts as acceptable evidence for influence?
-* Which instances of hypothesized influence are widely accepted among political theorists? Which ones are widely rejected? Which ones were obvious, and which ones were only accepted after long debate?
+* What counts as **acceptable evidence** for influence?
+* Which instances of hypothesized influence are **widely accepted** among political theorists? Which ones are **widely rejected**? Which ones were obvious, and which ones were only accepted after long debate?
 
 ## Text-Mining Influence Claims {.smaller}
 
@@ -447,7 +444,29 @@ $$
 ![](influence_model.svg){width="80%"}
 </center>
 
-## Innovation and Influence in Twentieth Century Marxism
+## Dyadic Influence: Anonymous Communiqués of the First Intifada
+
+<center>
+![](bayanat_topics.svg)
+</center>
+
+::: {.aside}
+Small data! $N = 54$
+:::
+
+## Relative Focus
+
+<center>
+![](topics_by_group.svg){width="90%"}
+</center>
+
+## Adapting Over Time?
+
+<center>
+![](islam_nationalism.svg)
+</center>
+
+## $N$-Ary Influence and Innovation in Twentieth Century Marxism
 
 ::: columns
 ::: {.column width="50%"}
@@ -466,7 +485,7 @@ $$
 :::
 :::
 
-## Semantic Leadership in Nineteenth Century Socialist Thought
+## Semantic Leadership in Nineteenth Century Socialist Thought {.smaller}
 
 ::: columns
 ::: {.column width="40%"}
@@ -487,32 +506,42 @@ $$
 :::
 :::
 
-## Fi Hadal Habs: Anonymous Communiqués of the First Intifada
+* So... what was Marx *doing*, then? How did he "win" the war of words, strategy-wise?
+
+## Marx's Rhetorical "Playing Field":
 
 <center>
-![](bayanat_topics.svg)
+![](pe_centroid.svg){width="62%"}
+</center>
+<center>
+![](heg_centroid.svg){width='62%'}
 </center>
 
-::: {.aside}
-Small data! $N = 54$
+## And His Maneuvers Across it, Over Time:
+
+<center>
+![](camb_result.png)
+</center>
+
+## ...What About the Twentieth Century? {.smaller}
+
+::: {.callout-note appearance="minimal"}
+[*Two world wars, followed by two waves of global rebellion
+and revolution, which brought to power a system that claimed to be the **historically predestined alternative** to bourgeois and capitalist society [...] involving one third of the globe's population. The huge **colonial empires**, built up before and during the Age of Empire, were shaken and crumbled into dust.*]{.biggerer}
+
+::: {.align-right}
+[@hobsbawm_age_1994, p. 7]
+:::
 :::
 
-## Relative Focus
+* The good news: entire state apparatuses could be put to work mass-producing and promulgating Marx's writings
+* The bad news: Europe no longer the location of the inevitable worker's revolution...
+* The dialectical synthesis: late Marx and Lenin wrote voluminously on possibilities for *Third World* revolution... strategically draw out those writings and export!
+
+## Preliminary (But Suggestive!) Results
 
 <center>
-![](topics_by_group.svg){width="90%"}
-</center>
-
-## Relative Focus: Zooming In
-
-<center>
-![](topics_by_group_sub.svg){width="90%"}
-</center>
-
-## Adapting Over Time?
-
-<center>
-![](islam_nationalism.svg)
+![](eth_arms.svg)
 </center>
 
 ## Thank You!

@@ -460,9 +460,8 @@ Section 1: Background
 </tbody>
 </table>
 </section>
-<section id="whats-missing" class="slide level2">
-<h2>What’s Missing?</h2>
-<p>…Context!</p>
+<section id="whats-missing-context" class="slide level2">
+<h2>What’s Missing? (Context!)</h2>
 <div class="callout callout-note no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
@@ -497,7 +496,7 @@ Section 1: Background
 <ul>
 <li>What are political actors <em>doing</em> with words?
 <ul>
-<li>“condemning, opposing, resisting, demanding, beseeching, supporting, rewarding […] attacking, expelling, cursing, cheering, singing” <span class="citation" data-cites="tilly_contentious_2008">(<a href="#/references" role="doc-biblioref" onclick="">Tilly 2008</a>)</span></li>
+<li>“telling someone? […] reminding them, or warning them, or reassuring them? […] explaining something, apologising, or criticising […] lamenting […] Perhaps he meant nothing at all.”</li>
 </ul></li>
 </ul>
 <!-- > "a battle, a struggle, a place and an instrument of confrontation, a weapon of power, of control, of subjection, of qualification and of disqualification." Foucault -->
@@ -567,7 +566,7 @@ Section 2: Models of Meaning and Context
 </h1>
 </div>
 <ul>
-<li>How can we adapt tools from <em>computer science</em> to allow <em>social scientists</em> and <em>humanists</em> to make meaningful inferences?</li>
+<li>How can we adapt tools from <em>computer science</em> to allow <em>social scientists</em> and <em>humanists</em> to make meaningful (context-sensitve!) inferences?</li>
 </ul>
 <!-- "However, the knowledge transfer from computer science and related fields has created confusion in how text as data models are applied, how they are validated, and how their output is interpreted. This confusion emerges because tasks in academic computer science are different than the tasks in social science, the digital humanities, and even parts of industry. While computer scientists are often (but not exclusively!) interested in information retrieval, recommendation systems, and benchmark linguistic tasks, a different community is interested in using “text as data” to learn about previously studied phenomena such as in social science, literature, and history. Despite these differences of purpose, text as data practitioners have tended to reflexively adopt the guidance from the computer science literature when doing their own work. This blind importing of the default methods and practices used to select, evaluate, and validate models from the computer science literature can lead to unintended consequences." -->
 </section>
@@ -626,7 +625,7 @@ Section 2: Models of Meaning and Context
 <tbody><tr>
 <th>
 </th>
-<th class="bb">
+<th class="bb" width="25%">
 Dependency Tree
 </th>
 <th>
@@ -637,7 +636,7 @@ Dependency Tree
 </tr>
 <tr>
 <td class="bb tb">
-Co-Hyponyms (Paradigmatic) <span class="math inline">\(\rightarrow\)</span>
+Co-Hyponyms <span class="math inline">\(\rightarrow\)</span>
 </td>
 <td class="ln tb bn">
 Pauling
@@ -646,11 +645,12 @@ Pauling
 nondeterministic
 </td>
 <td class="bb">
-<span class="math inline">\(\leftarrow\)</span> Topically Related (Syntagmatic)
+<span class="math inline">\(\leftarrow\)</span> Topically Related
 </td>
 </tr>
 <tr>
 <td class="bn">
+(Paradigmatic)<sup>1</sup>
 </td>
 <td class="lb bn">
 Hotelling
@@ -659,6 +659,7 @@ Hotelling
 computability
 </td>
 <td class="bn">
+(Syntagmatic)<sup>2</sup>
 </td>
 </tr>
 <tr>
@@ -696,7 +697,7 @@ finite-state
 
 <aside><div>
 <p>Example adapted from <a href="https://w4nderlu.st/teaching/word-embeddings">https://w4nderlu.st/teaching/word-embeddings</a></p>
-</div></aside></section>
+</div><ol class="aside-footnotes"><li id="fn1"><p>Paradigmatic relationship <span class="math inline">\(\approx\)</span> substitutable, drawn from the same category of objects (BTS <span class="math inline">\(\leftrightarrow\)</span> BLACKPINK)</p></li><li id="fn2"><p>Syntagmatic relationships <span class="math inline">\(\approx\)</span> semantic relationships between words in a sentence (BTS <span class="math inline">\(\leftrightarrow\)</span> danced)</p></li></ol></aside></section>
 <section id="raw-word-embeddings" class="slide level2 smaller">
 <h2>Raw Word Embeddings</h2>
 <ul>
@@ -815,12 +816,12 @@ Section 3: Case Studies
 </div>
 </div>
 </section>
-<section id="step-1" class="slide level2">
-<h2>Step 1</h2>
+<section id="first-steps" class="slide level2">
+<h2>First Steps</h2>
 <ul>
 <li>How have political theorists conceptualized “influence” thus far?</li>
-<li>What counts as acceptable evidence for influence?</li>
-<li>Which instances of hypothesized influence are widely accepted among political theorists? Which ones are widely rejected? Which ones were obvious, and which ones were only accepted after long debate?</li>
+<li>What counts as <strong>acceptable evidence</strong> for influence?</li>
+<li>Which instances of hypothesized influence are <strong>widely accepted</strong> among political theorists? Which ones are <strong>widely rejected</strong>? Which ones were obvious, and which ones were only accepted after long debate?</li>
 </ul>
 </section>
 <section id="text-mining-influence-claims" class="slide level2 smaller">
@@ -870,8 +871,29 @@ Section 3: Case Studies
 <img data-src="influence_model.svg" style="width:80.0%">
 </center>
 </section>
-<section id="innovation-and-influence-in-twentieth-century-marxism" class="slide level2">
-<h2>Innovation and Influence in Twentieth Century Marxism</h2>
+<section id="dyadic-influence-anonymous-communiqués-of-the-first-intifada" class="slide level2">
+<h2>Dyadic Influence: Anonymous Communiqués of the First Intifada</h2>
+<center>
+<img data-src="bayanat_topics.svg">
+</center>
+
+<aside><div>
+<p>Small data! <span class="math inline">\(N = 54\)</span></p>
+</div></aside></section>
+<section id="relative-focus" class="slide level2">
+<h2>Relative Focus</h2>
+<center>
+<img data-src="topics_by_group.svg" style="width:90.0%">
+</center>
+</section>
+<section id="adapting-over-time" class="slide level2">
+<h2>Adapting Over Time?</h2>
+<center>
+<img data-src="islam_nationalism.svg">
+</center>
+</section>
+<section id="n-ary-influence-and-innovation-in-twentieth-century-marxism" class="slide level2">
+<h2><span class="math inline">\(N\)</span>-Ary Influence and Innovation in Twentieth Century Marxism</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <center>
@@ -884,7 +906,7 @@ Section 3: Case Studies
 </div>
 </div>
 </section>
-<section id="semantic-leadership-in-nineteenth-century-socialist-thought" class="slide level2">
+<section id="semantic-leadership-in-nineteenth-century-socialist-thought" class="slide level2 smaller">
 <h2>Semantic Leadership in Nineteenth Century Socialist Thought</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -900,32 +922,47 @@ Section 3: Case Studies
 </center>
 </div>
 </div>
+<ul>
+<li>So… what was Marx <em>doing</em>, then? How did he “win” the war of words, strategy-wise?</li>
+</ul>
 </section>
-<section id="fi-hadal-habs-anonymous-communiqués-of-the-first-intifada" class="slide level2">
-<h2>Fi Hadal Habs: Anonymous Communiqués of the First Intifada</h2>
+<section id="marxs-rhetorical-playing-field" class="slide level2">
+<h2>Marx’s Rhetorical “Playing Field”:</h2>
 <center>
-<img data-src="bayanat_topics.svg">
+<img data-src="pe_centroid.svg" style="width:62.0%">
 </center>
-
-<aside><div>
-<p>Small data! <span class="math inline">\(N = 54\)</span></p>
-</div></aside></section>
-<section id="relative-focus" class="slide level2">
-<h2>Relative Focus</h2>
 <center>
-<img data-src="topics_by_group.svg" style="width:90.0%">
+<img data-src="heg_centroid.svg" style="width:62.0%">
 </center>
 </section>
-<section id="relative-focus-zooming-in" class="slide level2">
-<h2>Relative Focus: Zooming In</h2>
+<section id="and-his-maneuvers-across-it-over-time" class="slide level2">
+<h2>And His Maneuvers Across it, Over Time:</h2>
 <center>
-<img data-src="topics_by_group_sub.svg" style="width:90.0%">
+<img data-src="camb_result.png">
 </center>
 </section>
-<section id="adapting-over-time" class="slide level2">
-<h2>Adapting Over Time?</h2>
+<section id="what-about-the-twentieth-century" class="slide level2 smaller">
+<h2>…What About the Twentieth Century?</h2>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><span class="biggerer"><em>Two world wars, followed by two waves of global rebellion and revolution, which brought to power a system that claimed to be the <strong>historically predestined alternative</strong> to bourgeois and capitalist society […] involving one third of the globe’s population. The huge <strong>colonial empires</strong>, built up before and during the Age of Empire, were shaken and crumbled into dust.</em></span></p>
+<div class="align-right">
+<p><span class="citation" data-cites="hobsbawm_age_1994">(<a href="#/references" role="doc-biblioref" onclick="">Hobsbawm 1994, 7</a>)</span></p>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>The good news: entire state apparatuses could be put to work mass-producing and promulgating Marx’s writings</li>
+<li>The bad news: Europe no longer the location of the inevitable worker’s revolution…</li>
+<li>The dialectical synthesis: late Marx and Lenin wrote voluminously on possibilities for <em>Third World</em> revolution… strategically draw out those writings and export!</li>
+</ul>
+</section>
+<section id="preliminary-but-suggestive-results" class="slide level2">
+<h2>Preliminary (But Suggestive!) Results</h2>
 <center>
-<img data-src="islam_nationalism.svg">
+<img data-src="eth_arms.svg">
 </center>
 </section>
 <section id="thank-you" class="slide level2">
@@ -955,6 +992,9 @@ Gandy, D. Ross. 1979. <em>Marx and <span>History</span>: <span>From Primitive So
 <div id="ref-grimmer_text_2022" class="csl-entry" role="listitem">
 Grimmer, Justin, Margaret E. Roberts, and Brandon M. Stewart. 2022. <em>Text as <span>Data</span>: <span>A New Framework</span> for <span>Machine Learning</span> and the <span>Social Sciences</span></em>. <span>Princeton University Press</span>.
 </div>
+<div id="ref-hobsbawm_age_1994" class="csl-entry" role="listitem">
+Hobsbawm, Eric J. 1994. <em>Age of <span>Extremes</span>: <span>The Short Twentieth Century</span>, 1914-1991</em>. <span>Michael Joseph</span>.
+</div>
 <div id="ref-levine_divergent_2006" class="csl-entry" role="listitem">
 Levine, Norman. 2006. <em>Divergent <span>Paths</span>: <span>The Hegelian</span> Foundations of <span>Marx</span>’s Method</em>. <span>Lanham, MD</span>: <span>Lexington Books</span>.
 </div>
@@ -979,9 +1019,6 @@ Soni, Sandeep, Lauren F. Klein, and Jacob Eisenstein. 2021. <span>“Abolitionis
 <div id="ref-sperber_explaining_1996" class="csl-entry" role="listitem">
 Sperber, Dan. 1996. <em>Explaining <span>Culture</span>: <span>A Naturalistic Approach</span></em>. <span>Cambridge</span>: <span>Blackwell</span>.
 </div>
-<div id="ref-tilly_contentious_2008" class="csl-entry" role="listitem">
-Tilly, Charles. 2008. <em>Contentious <span>Performances</span></em>. <span>New York</span>: <span>Cambridge University Press</span>.
-</div>
 <div id="ref-toews_hegelianism_1985" class="csl-entry" role="listitem">
 Toews, John Edward. 1985. <em>Hegelianism: <span>The Path Toward Dialectical Humanism</span>, 1805-1841</em>. <span>Cambridge University Press</span>.
 </div>
@@ -990,6 +1027,7 @@ Wright, James Kenneth. 2006. <em>Schoenberg, <span>Wittgenstein</span> and the <
 </div>
 </div>
 </section>
+
     </div>
   </div>
 

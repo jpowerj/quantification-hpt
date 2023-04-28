@@ -17,7 +17,8 @@ class PointData:
         self.draw_label = draw_label
 
     def escaped_label(self):
-        return self.label.replace("_", "\\_")
+        #return self.label.replace("_", "\\_")
+        return self.label.replace("_", "-")
 
     def __str__(self):
         return f"PointData[x={self.x},y={self.y},label={self.label},anchor={self.anchor}]"
@@ -140,6 +141,7 @@ def get_prop(token, label_data, prop_name, default_val=None):
 def custom_latex_export(df, label_data=None, arrow_data=None, floor_ceil=False,
                         self_contained=False, pad_pct=0.05, axis_options=None,
                         debug=False):
+    vprint = print if debug else lambda x: None
     if label_data is None:
         label_data = {}
     if axis_options is None:
@@ -153,6 +155,7 @@ def custom_latex_export(df, label_data=None, arrow_data=None, floor_ceil=False,
     label_list = []
     for row_index, row in df.iterrows():
         cur_token = row_index
+        vprint(f"Adding {cur_token}")
         should_include = get_prop(cur_token, label_data, 'include', True)
         if not should_include:
             continue

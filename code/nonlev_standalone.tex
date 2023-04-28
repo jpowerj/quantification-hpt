@@ -1,0 +1,94 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary{bayesnet}
+\usepackage{tikzscale}
+\usepackage{tkz-euclide}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+% pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+% For entities in pgfplots
+\newcommand{\entpgf}[1]{\texttt{#1}}
+
+\begin{document}
+
+\begin{tikzpicture}
+\pgfplotsset{ticks=none}
+		\begin{axis}[
+		    axis x line=bottom,
+			axis y line=left,
+			xmin=-4.0602307-0.6477423667907716, xmax=8.894616+0.6477423667907716,
+			ymin=-5.775275-0.2335655689239502, ymax=-1.103964+0.2335655689239502,
+			xtick={-4.0602307,8.894616},ytick={-5.775275,-1.103964},
+			xlabel=$x$,ylabel=$y$,
+			%x label style={anchor=west},
+			%y label style={anchor=south},
+			width=\textwidth
+			]
+			\addplot+[mark options={fill=black,color=black},only marks,point meta=explicit symbolic, nodes near coords] coordinates {
+(1.0946166515350342, -1.8283809423446655)[]
+(8.481914520263672, -5.663385391235352)[]
+(5.406015396118164, -4.089677810668945)[]
+(0.2851034104824066, -1.7829148769378662)[]
+(-0.16186292469501495, -1.748208999633789)[]
+(-0.3515095114707947, -1.5368423461914062)[]
+(-0.6271259188652039, -1.6307122707366943)[]
+(8.296405792236328, -5.476387023925781)[]
+(0.3225903809070587, -1.5350379943847656)[]
+(-4.060230731964111, -1.5686722993850708)[]
+(8.89461612701416, -5.775275230407715)[]
+(4.296911716461182, -3.391932487487793)[]
+(-1.6108843088150024, -1.480604887008667)[]
+(-0.15201611816883087, -1.1039639711380005)[]
+(4.01138973236084, -3.0391016006469727)[]
+(-0.15253272652626038, -1.7645165920257568)[]
+(4.886602401733398, -3.992400646209717)[]
+};
+\node (authority) at (axis cs:1.0946167, -1.828381){};
+\node (christ) at (axis cs:8.4819145, -5.6633854){};
+\node (civill) at (axis cs:5.4060154, -4.089678){};
+\node (common-wealth) at (axis cs:0.2851034, -1.7829149){};
+\node (fear) at (axis cs:-0.16186292, -1.748209){};
+\node (free) at (axis cs:-0.3515095, -1.5368423){};
+\node (government) at (axis cs:-0.6271259, -1.6307123){};
+\node (holy) at (axis cs:8.296406, -5.476387){};
+\node (justice) at (axis cs:0.32259038, -1.535038){};
+\node (king) at (axis cs:-4.0602307, -1.5686723){};
+\node (kingdome) at (axis cs:8.894616, -5.775275){};
+\node (law) at (axis cs:4.2969117, -3.3919325){};
+\node (liberty) at (axis cs:-1.6108843, -1.4806049){};
+\node (lord) at (axis cs:-0.15201612, -1.103964){};
+\node (obey) at (axis cs:4.0113897, -3.0391016){};
+\node (power) at (axis cs:-0.15253273, -1.7645166){};
+\node (soveraign) at (axis cs:4.8866024, -3.9924006){};
+\node[anchor = north, xshift=0.0, yshift=0.0] (authorityl) at(axis cs: 1.0946167, -1.828381){$\entpgf{authority}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (christl) at(axis cs: 8.4819145, -5.6633854){$\entpgf{christ}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (civilll) at(axis cs: 5.4060154, -4.089678){$\entpgf{civill}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (common-wealthl) at(axis cs: 0.2851034, -1.7829149){$\entpgf{common-wealth}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (fearl) at(axis cs: -0.16186292, -1.748209){$\entpgf{fear}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (freel) at(axis cs: -0.3515095, -1.5368423){$\entpgf{free}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (governmentl) at(axis cs: -0.6271259, -1.6307123){$\entpgf{government}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (holyl) at(axis cs: 8.296406, -5.476387){$\entpgf{holy}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (justicel) at(axis cs: 0.32259038, -1.535038){$\entpgf{justice}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (kingl) at(axis cs: -4.0602307, -1.5686723){$\entpgf{king}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (kingdomel) at(axis cs: 8.894616, -5.775275){$\entpgf{kingdome}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (lawl) at(axis cs: 4.2969117, -3.3919325){$\entpgf{law}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (libertyl) at(axis cs: -1.6108843, -1.4806049){$\entpgf{liberty}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (lordl) at(axis cs: -0.15201612, -1.103964){$\entpgf{lord}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (obeyl) at(axis cs: 4.0113897, -3.0391016){$\entpgf{obey}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (powerl) at(axis cs: -0.15253273, -1.7645166){$\entpgf{power}$};
+\node[anchor = north, xshift=0.0, yshift=0.0] (soveraignl) at(axis cs: 4.8866024, -3.9924006){$\entpgf{soveraign}$};
+
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

@@ -9,3 +9,6 @@ code/*.model
 code/*.vectors
 code/*.pkl
 .Rproj.user
+
+*.gz
+code_influence/*.gz
